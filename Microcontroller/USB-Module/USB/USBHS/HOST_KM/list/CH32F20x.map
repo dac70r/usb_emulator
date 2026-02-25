@@ -8,15 +8,6 @@ Section Cross References
     main.o(i.UART4_IRQHandler) refers to ch32f20x_usart.o(i.USART_ReceiveData) for USART_ReceiveData
     main.o(i.UART4_IRQHandler) refers to main.o(.bss) for uart4_storage
     main.o(i.UART4_IRQHandler) refers to main.o(.data) for indexes
-    main.o(i.decode_frame) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
-    main.o(i.decode_frame) refers to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
-    main.o(i.decode_frame) refers to _printf_str.o(.text) for _printf_str
-    main.o(i.decode_frame) refers to _printf_pad.o(.text) for _printf_pre_padding
-    main.o(i.decode_frame) refers to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    main.o(i.decode_frame) refers to _printf_hex_int.o(.text) for _printf_longlong_hex
-    main.o(i.decode_frame) refers to rt_memcpy_v6.o(.text) for __aeabi_memcpy
-    main.o(i.decode_frame) refers to noretval__2printf.o(.text) for __2printf
-    main.o(i.decode_frame) refers to main.o(i.parse_hex_report) for parse_hex_report
     main.o(i.main) refers to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     main.o(i.main) refers to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
     main.o(i.main) refers to _printf_dec.o(.text) for _printf_int_dec
@@ -967,7 +958,6 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
-    Removing main.o(i.decode_frame), (172 bytes).
     Removing main.o(.constdata), (56 bytes).
     Removing core_cm3.o(.emb_text), (32 bytes).
     Removing ch32f20x_adc.o(i.ADC_AnalogWatchdogCmd), (20 bytes).
@@ -1525,7 +1515,7 @@ Removing Unused input sections from the image.
     Removing usbd_compostie_km.o(i.USART2_Init), (176 bytes).
     Removing usbd_compostie_km.o(i.USART2_Receive_Handle), (208 bytes).
 
-557 unused section(s) (total 37323 bytes) removed from the image.
+556 unused section(s) (total 37151 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1845,105 +1835,105 @@ Image Symbol Table
     i.USART_SendData                         0x08001bee   Section        0  ch32f20x_usart.o(i.USART_SendData)
     i.USB20_RCC_Init                         0x08001bf8   Section        0  ch32f20x_usbhs_host.o(i.USB20_RCC_Init)
     i.USBFS_Device_Endp_Init                 0x08001c38   Section        0  ch32f20x_usbfs_device.o(i.USBFS_Device_Endp_Init)
-    i.USBFS_Device_Init                      0x08001c98   Section        0  ch32f20x_usbfs_device.o(i.USBFS_Device_Init)
-    i.USBFS_Endp_DataUp                      0x08001d14   Section        0  ch32f20x_usbfs_device.o(i.USBFS_Endp_DataUp)
-    i.USBFS_IRQHandler                       0x08001e4c   Section        0  ch32f20x_usbfs_device.o(i.USBFS_IRQHandler)
-    i.USBFS_RCC_Init                         0x08002574   Section        0  ch32f20x_usbfs_host.o(i.USBFS_RCC_Init)
-    i.USBFS_Send_Resume                      0x080025c4   Section        0  ch32f20x_usbfs_device.o(i.USBFS_Send_Resume)
-    i.USBHS_Analysis_Descr                   0x080025f4   Section        0  ch32f20x_usbhs_host.o(i.USBHS_Analysis_Descr)
-    i.USBHS_CSPLITPacket                     0x08002820   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CSPLITPacket)
-    i.USBHS_CopySetupReqPkg                  0x080029a0   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CopySetupReqPkg)
-    i.USBHS_CtrlGetConfigDescr               0x080029bc   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetConfigDescr)
-    i.USBHS_CtrlGetDevDescr                  0x08002a88   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetDevDescr)
-    i.USBHS_CtrlGetReportDescr               0x08002b1c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetReportDescr)
-    i.USBHS_CtrlGet_HUBDevDescr              0x08002b58   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlGet_HUBDevDescr)
-    i.USBHS_CtrlSetIdle                      0x08002bb4   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlSetIdle)
-    i.USBHS_CtrlSetUsbConfig                 0x08002bd8   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlSetUsbConfig)
-    i.USBHS_CtrlUSBHS_SetAddress             0x08002bf8   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlUSBHS_SetAddress)
-    i.USBHS_CurrentAddr                      0x08002c30   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CurrentAddr)
-    i.USBHS_HOST_ClearPortFeature_Process    0x08002c3c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HOST_ClearPortFeature_Process)
-    i.USBHS_HUBCheckPortConnect              0x08002c64   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HUBCheckPortConnect)
-    i.USBHS_HUBHostEnum                      0x08002d74   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HUBHostEnum)
-    i.USBHS_HUB_Process                      0x0800340c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HUB_Process)
-    i.USBHS_HostCtrlTransfer                 0x08003dac   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HostCtrlTransfer)
-    i.USBHS_HostEnum                         0x08003f3c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HostEnum)
-    i.USBHS_HostInit                         0x08004194   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HostInit)
-    i.USBHS_HubClearPortFeature              0x080041f8   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubClearPortFeature)
-    i.USBHS_HubCtrlGetHidDescr               0x080042f0   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubCtrlGetHidDescr)
-    i.USBHS_HubCtrlTransfer                  0x08004344   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubCtrlTransfer)
-    i.USBHS_HubGetPortStatus                 0x08004538   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubGetPortStatus)
-    i.USBHS_HubSetPortFeature                0x080045a0   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubSetPortFeature)
-    i.USBHS_HubUSBGetDevDescr                0x080045c8   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBGetDevDescr)
-    i.USBHS_HubUSBHS_Analysis_Descr          0x08004634   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBHS_Analysis_Descr)
-    i.USBHS_HubUSBSetAddr                    0x080048bc   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBSetAddr)
-    i.USBHS_HubUSBSetIdle                    0x08004900   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBSetIdle)
-    i.USBHS_HubUSBUSBHS_SetConfig            0x0800493c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBUSBHS_SetConfig)
-    i.USBHS_INT_In_Data                      0x08004980   Section        0  ch32f20x_usbhs_host.o(i.USBHS_INT_In_Data)
-    i.USBHS_SSPLITPacket                     0x08004a2c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_SSPLITPacket)
-    i.USBHS_SetBusReset                      0x08004ba4   Section        0  ch32f20x_usbhs_host.o(i.USBHS_SetBusReset)
-    i.USBHS_USBHostTransact                  0x08004bf8   Section        0  ch32f20x_usbhs_host.o(i.USBHS_USBHostTransact)
-    i.USB_DelUSBHS_AddressNumber             0x08004d54   Section        0  ch32f20x_usbhs_host.o(i.USB_DelUSBHS_AddressNumber)
-    i.USB_SetUSBHS_AddressNumber             0x08004d70   Section        0  ch32f20x_usbhs_host.o(i.USB_SetUSBHS_AddressNumber)
-    i.USB_Sleep_Wakeup_CFG                   0x08004d98   Section        0  usbd_compostie_km.o(i.USB_Sleep_Wakeup_CFG)
-    i.UsageFault_Handler                     0x08004dc0   Section        0  ch32f20x_it.o(i.UsageFault_Handler)
-    i._is_digit                              0x08004dc4   Section        0  __printf_wp.o(i._is_digit)
-    i.fputc                                  0x08004dd4   Section        0  debug.o(i.fputc)
-    i.hex_to_byte                            0x08004df8   Section        0  main.o(i.hex_to_byte)
-    i.main                                   0x08004e28   Section        0  main.o(i.main)
-    i.parse_hex_report                       0x08005274   Section        0  main.o(i.parse_hex_report)
-    locale$$code                             0x080052e4   Section       44  lc_ctype_c.o(locale$$code)
-    .constdata                               0x08005310   Section      112  ch32f20x_usbhs_host.o(.constdata)
-    SetupGetDevDesc                          0x08005310   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    SetupGetCfgDesc                          0x08005318   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    SetupGetStrDesc                          0x08005320   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    SetupSetAddr                             0x08005328   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    SetupSetConfig                           0x08005330   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    SetupClearEndpStall                      0x08005338   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    SetupSetInterface                        0x08005340   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    .constdata                               0x08005380   Section      259  usbd_desc.o(.constdata)
-    .constdata                               0x08005483   Section       40  _printf_hex_int.o(.constdata)
-    uc_hextab                                0x08005483   Data          20  _printf_hex_int.o(.constdata)
-    lc_hextab                                0x08005497   Data          20  _printf_hex_int.o(.constdata)
-    .constdata                               0x080054ab   Section       17  __printf_flags_wp.o(.constdata)
-    maptable                                 0x080054ab   Data          17  __printf_flags_wp.o(.constdata)
-    .conststring                             0x080054bc   Section       91  ch32f20x_usbhs_host.o(.conststring)
-    locale$$data                             0x08005538   Section      272  lc_ctype_c.o(locale$$data)
-    __lcctype_c_name                         0x0800553c   Data           2  lc_ctype_c.o(locale$$data)
-    __lcctype_c_start                        0x08005544   Data           0  lc_ctype_c.o(locale$$data)
-    __lcctype_c_end                          0x08005648   Data           0  lc_ctype_c.o(locale$$data)
-    .data                                    0x20000000   Section       15  main.o(.data)
+    i.USBFS_Device_Init                      0x08001ca0   Section        0  ch32f20x_usbfs_device.o(i.USBFS_Device_Init)
+    i.USBFS_Endp_DataUp                      0x08001d1c   Section        0  ch32f20x_usbfs_device.o(i.USBFS_Endp_DataUp)
+    i.USBFS_IRQHandler                       0x08001e54   Section        0  ch32f20x_usbfs_device.o(i.USBFS_IRQHandler)
+    i.USBFS_RCC_Init                         0x08002668   Section        0  ch32f20x_usbfs_host.o(i.USBFS_RCC_Init)
+    i.USBFS_Send_Resume                      0x080026b8   Section        0  ch32f20x_usbfs_device.o(i.USBFS_Send_Resume)
+    i.USBHS_Analysis_Descr                   0x080026e8   Section        0  ch32f20x_usbhs_host.o(i.USBHS_Analysis_Descr)
+    i.USBHS_CSPLITPacket                     0x08002914   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CSPLITPacket)
+    i.USBHS_CopySetupReqPkg                  0x08002a94   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CopySetupReqPkg)
+    i.USBHS_CtrlGetConfigDescr               0x08002ab0   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetConfigDescr)
+    i.USBHS_CtrlGetDevDescr                  0x08002b7c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetDevDescr)
+    i.USBHS_CtrlGetReportDescr               0x08002c10   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetReportDescr)
+    i.USBHS_CtrlGet_HUBDevDescr              0x08002c4c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlGet_HUBDevDescr)
+    i.USBHS_CtrlSetIdle                      0x08002ca8   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlSetIdle)
+    i.USBHS_CtrlSetUsbConfig                 0x08002ccc   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlSetUsbConfig)
+    i.USBHS_CtrlUSBHS_SetAddress             0x08002cec   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CtrlUSBHS_SetAddress)
+    i.USBHS_CurrentAddr                      0x08002d24   Section        0  ch32f20x_usbhs_host.o(i.USBHS_CurrentAddr)
+    i.USBHS_HOST_ClearPortFeature_Process    0x08002d30   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HOST_ClearPortFeature_Process)
+    i.USBHS_HUBCheckPortConnect              0x08002d58   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HUBCheckPortConnect)
+    i.USBHS_HUBHostEnum                      0x08002e68   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HUBHostEnum)
+    i.USBHS_HUB_Process                      0x08003500   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HUB_Process)
+    i.USBHS_HostCtrlTransfer                 0x08003ea0   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HostCtrlTransfer)
+    i.USBHS_HostEnum                         0x08004030   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HostEnum)
+    i.USBHS_HostInit                         0x08004288   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HostInit)
+    i.USBHS_HubClearPortFeature              0x080042ec   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubClearPortFeature)
+    i.USBHS_HubCtrlGetHidDescr               0x080043e4   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubCtrlGetHidDescr)
+    i.USBHS_HubCtrlTransfer                  0x08004438   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubCtrlTransfer)
+    i.USBHS_HubGetPortStatus                 0x0800462c   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubGetPortStatus)
+    i.USBHS_HubSetPortFeature                0x08004694   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubSetPortFeature)
+    i.USBHS_HubUSBGetDevDescr                0x080046bc   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBGetDevDescr)
+    i.USBHS_HubUSBHS_Analysis_Descr          0x08004728   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBHS_Analysis_Descr)
+    i.USBHS_HubUSBSetAddr                    0x080049b0   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBSetAddr)
+    i.USBHS_HubUSBSetIdle                    0x080049f4   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBSetIdle)
+    i.USBHS_HubUSBUSBHS_SetConfig            0x08004a30   Section        0  ch32f20x_usbhs_host.o(i.USBHS_HubUSBUSBHS_SetConfig)
+    i.USBHS_INT_In_Data                      0x08004a74   Section        0  ch32f20x_usbhs_host.o(i.USBHS_INT_In_Data)
+    i.USBHS_SSPLITPacket                     0x08004b20   Section        0  ch32f20x_usbhs_host.o(i.USBHS_SSPLITPacket)
+    i.USBHS_SetBusReset                      0x08004c98   Section        0  ch32f20x_usbhs_host.o(i.USBHS_SetBusReset)
+    i.USBHS_USBHostTransact                  0x08004cec   Section        0  ch32f20x_usbhs_host.o(i.USBHS_USBHostTransact)
+    i.USB_DelUSBHS_AddressNumber             0x08004e48   Section        0  ch32f20x_usbhs_host.o(i.USB_DelUSBHS_AddressNumber)
+    i.USB_SetUSBHS_AddressNumber             0x08004e64   Section        0  ch32f20x_usbhs_host.o(i.USB_SetUSBHS_AddressNumber)
+    i.USB_Sleep_Wakeup_CFG                   0x08004e8c   Section        0  usbd_compostie_km.o(i.USB_Sleep_Wakeup_CFG)
+    i.UsageFault_Handler                     0x08004eb4   Section        0  ch32f20x_it.o(i.UsageFault_Handler)
+    i._is_digit                              0x08004eb8   Section        0  __printf_wp.o(i._is_digit)
+    i.fputc                                  0x08004ec8   Section        0  debug.o(i.fputc)
+    i.hex_to_byte                            0x08004eec   Section        0  main.o(i.hex_to_byte)
+    i.main                                   0x08004f1c   Section        0  main.o(i.main)
+    i.parse_hex_report                       0x080053b0   Section        0  main.o(i.parse_hex_report)
+    locale$$code                             0x08005420   Section       44  lc_ctype_c.o(locale$$code)
+    .constdata                               0x0800544c   Section      112  ch32f20x_usbhs_host.o(.constdata)
+    SetupGetDevDesc                          0x0800544c   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    SetupGetCfgDesc                          0x08005454   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    SetupGetStrDesc                          0x0800545c   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    SetupSetAddr                             0x08005464   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    SetupSetConfig                           0x0800546c   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    SetupClearEndpStall                      0x08005474   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    SetupSetInterface                        0x0800547c   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    .constdata                               0x080054bc   Section      336  usbd_desc.o(.constdata)
+    .constdata                               0x0800560c   Section       40  _printf_hex_int.o(.constdata)
+    uc_hextab                                0x0800560c   Data          20  _printf_hex_int.o(.constdata)
+    lc_hextab                                0x08005620   Data          20  _printf_hex_int.o(.constdata)
+    .constdata                               0x08005634   Section       17  __printf_flags_wp.o(.constdata)
+    maptable                                 0x08005634   Data          17  __printf_flags_wp.o(.constdata)
+    .conststring                             0x08005648   Section       91  ch32f20x_usbhs_host.o(.conststring)
+    locale$$data                             0x080056c4   Section      272  lc_ctype_c.o(locale$$data)
+    __lcctype_c_name                         0x080056c8   Data           2  lc_ctype_c.o(locale$$data)
+    __lcctype_c_start                        0x080056d0   Data           0  lc_ctype_c.o(locale$$data)
+    __lcctype_c_end                          0x080057d4   Data           0  lc_ctype_c.o(locale$$data)
+    .data                                    0x20000000   Section       19  main.o(.data)
     communication_mode                       0x20000000   Data           1  main.o(.data)
-    .data                                    0x20000010   Section       20  system_ch32f20x.o(.data)
-    .data                                    0x20000024   Section        8  debug.o(.data)
-    p_us                                     0x20000028   Data           1  debug.o(.data)
-    p_ms                                     0x2000002a   Data           2  debug.o(.data)
-    .data                                    0x2000002c   Section       20  ch32f20x_rcc.o(.data)
-    APBAHBPrescTable                         0x2000002c   Data          16  ch32f20x_rcc.o(.data)
-    ADCPrescTable                            0x2000003c   Data           4  ch32f20x_rcc.o(.data)
-    .data                                    0x20000040   Section        8  usb_hub.o(.data)
-    .data                                    0x20000048   Section       19  ch32f20x_usbhs_host.o(.data)
-    communication_mode                       0x20000048   Data           1  ch32f20x_usbhs_host.o(.data)
-    .data                                    0x2000005c   Section       28  ch32f20x_usbfs_device.o(.data)
-    .data                                    0x20000078   Section       39  usbd_compostie_km.o(.data)
-    flag                                     0x20000093   Data           1  usbd_compostie_km.o(.data)
-    scan_cnt                                 0x20000094   Data           2  usbd_compostie_km.o(.data)
-    scan_result                              0x20000096   Data           2  usbd_compostie_km.o(.data)
-    key_cnt                                  0x20000098   Data           1  usbd_compostie_km.o(.data)
+    .data                                    0x20000014   Section       20  system_ch32f20x.o(.data)
+    .data                                    0x20000028   Section        8  debug.o(.data)
+    p_us                                     0x2000002c   Data           1  debug.o(.data)
+    p_ms                                     0x2000002e   Data           2  debug.o(.data)
+    .data                                    0x20000030   Section       20  ch32f20x_rcc.o(.data)
+    APBAHBPrescTable                         0x20000030   Data          16  ch32f20x_rcc.o(.data)
+    ADCPrescTable                            0x20000040   Data           4  ch32f20x_rcc.o(.data)
+    .data                                    0x20000044   Section        8  usb_hub.o(.data)
+    .data                                    0x2000004c   Section       19  ch32f20x_usbhs_host.o(.data)
+    communication_mode                       0x2000004c   Data           1  ch32f20x_usbhs_host.o(.data)
+    .data                                    0x20000060   Section       30  ch32f20x_usbfs_device.o(.data)
+    .data                                    0x2000007e   Section       39  usbd_compostie_km.o(.data)
     flag                                     0x20000099   Data           1  usbd_compostie_km.o(.data)
     scan_cnt                                 0x2000009a   Data           2  usbd_compostie_km.o(.data)
     scan_result                              0x2000009c   Data           2  usbd_compostie_km.o(.data)
-    flag                                     0x2000009e   Data           1  usbd_compostie_km.o(.data)
-    .bss                                     0x200000a0   Section     4352  main.o(.bss)
-    .bss                                     0x200011a0   Section     3680  usb_hub.o(.bss)
-    .bss                                     0x20002000   Section     3224  ch32f20x_usbhs_host.o(.bss)
-    .bss                                     0x20002c98   Section     4330  ch32f20x_usbfs_host.o(.bss)
-    .bss                                     0x20003d84   Section      192  ch32f20x_usbfs_device.o(.bss)
-    .bss                                     0x20003e44   Section       96  libspace.o(.bss)
-    HEAP                                     0x20003ea8   Section     1024  startup_ch32f20x_d8c.o(HEAP)
-    Heap_Mem                                 0x20003ea8   Data        1024  startup_ch32f20x_d8c.o(HEAP)
-    STACK                                    0x200042a8   Section     1024  startup_ch32f20x_d8c.o(STACK)
-    Stack_Mem                                0x200042a8   Data        1024  startup_ch32f20x_d8c.o(STACK)
-    __initial_sp                             0x200046a8   Data           0  startup_ch32f20x_d8c.o(STACK)
+    key_cnt                                  0x2000009e   Data           1  usbd_compostie_km.o(.data)
+    flag                                     0x2000009f   Data           1  usbd_compostie_km.o(.data)
+    scan_cnt                                 0x200000a0   Data           2  usbd_compostie_km.o(.data)
+    scan_result                              0x200000a2   Data           2  usbd_compostie_km.o(.data)
+    flag                                     0x200000a4   Data           1  usbd_compostie_km.o(.data)
+    .bss                                     0x200000a8   Section     4352  main.o(.bss)
+    .bss                                     0x200011a8   Section     3680  usb_hub.o(.bss)
+    .bss                                     0x20002008   Section     3224  ch32f20x_usbhs_host.o(.bss)
+    .bss                                     0x20002ca0   Section     4330  ch32f20x_usbfs_host.o(.bss)
+    .bss                                     0x20003d8c   Section      256  ch32f20x_usbfs_device.o(.bss)
+    .bss                                     0x20003e8c   Section       96  libspace.o(.bss)
+    HEAP                                     0x20003ef0   Section     1024  startup_ch32f20x_d8c.o(HEAP)
+    Heap_Mem                                 0x20003ef0   Data        1024  startup_ch32f20x_d8c.o(HEAP)
+    STACK                                    0x200042f0   Section     1024  startup_ch32f20x_d8c.o(STACK)
+    Stack_Mem                                0x200042f0   Data        1024  startup_ch32f20x_d8c.o(STACK)
+    __initial_sp                             0x200046f0   Data           0  startup_ch32f20x_d8c.o(STACK)
 
     Global Symbols
 
@@ -2244,135 +2234,138 @@ Image Symbol Table
     USART_ReceiveData                        0x08001be5   Thumb Code    10  ch32f20x_usart.o(i.USART_ReceiveData)
     USART_SendData                           0x08001bef   Thumb Code     8  ch32f20x_usart.o(i.USART_SendData)
     USB20_RCC_Init                           0x08001bf9   Thumb Code    56  ch32f20x_usbhs_host.o(i.USB20_RCC_Init)
-    USBFS_Device_Endp_Init                   0x08001c39   Thumb Code    74  ch32f20x_usbfs_device.o(i.USBFS_Device_Endp_Init)
-    USBFS_Device_Init                        0x08001c99   Thumb Code   120  ch32f20x_usbfs_device.o(i.USBFS_Device_Init)
-    USBFS_Endp_DataUp                        0x08001d15   Thumb Code   306  ch32f20x_usbfs_device.o(i.USBFS_Endp_DataUp)
-    USBFS_IRQHandler                         0x08001e4d   Thumb Code  1786  ch32f20x_usbfs_device.o(i.USBFS_IRQHandler)
-    USBFS_RCC_Init                           0x08002575   Thumb Code    64  ch32f20x_usbfs_host.o(i.USBFS_RCC_Init)
-    USBFS_Send_Resume                        0x080025c5   Thumb Code    48  ch32f20x_usbfs_device.o(i.USBFS_Send_Resume)
-    USBHS_Analysis_Descr                     0x080025f5   Thumb Code   294  ch32f20x_usbhs_host.o(i.USBHS_Analysis_Descr)
-    USBHS_CSPLITPacket                       0x08002821   Thumb Code   376  ch32f20x_usbhs_host.o(i.USBHS_CSPLITPacket)
-    USBHS_CopySetupReqPkg                    0x080029a1   Thumb Code    24  ch32f20x_usbhs_host.o(i.USBHS_CopySetupReqPkg)
-    USBHS_CtrlGetConfigDescr                 0x080029bd   Thumb Code   126  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetConfigDescr)
-    USBHS_CtrlGetDevDescr                    0x08002a89   Thumb Code    78  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetDevDescr)
-    USBHS_CtrlGetReportDescr                 0x08002b1d   Thumb Code    50  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetReportDescr)
-    USBHS_CtrlGet_HUBDevDescr                0x08002b59   Thumb Code    74  ch32f20x_usbhs_host.o(i.USBHS_CtrlGet_HUBDevDescr)
-    USBHS_CtrlSetIdle                        0x08002bb5   Thumb Code    30  ch32f20x_usbhs_host.o(i.USBHS_CtrlSetIdle)
-    USBHS_CtrlSetUsbConfig                   0x08002bd9   Thumb Code    24  ch32f20x_usbhs_host.o(i.USBHS_CtrlSetUsbConfig)
-    USBHS_CtrlUSBHS_SetAddress               0x08002bf9   Thumb Code    46  ch32f20x_usbhs_host.o(i.USBHS_CtrlUSBHS_SetAddress)
-    USBHS_CurrentAddr                        0x08002c31   Thumb Code     6  ch32f20x_usbhs_host.o(i.USBHS_CurrentAddr)
-    USBHS_HOST_ClearPortFeature_Process      0x08002c3d   Thumb Code    36  ch32f20x_usbhs_host.o(i.USBHS_HOST_ClearPortFeature_Process)
-    USBHS_HUBCheckPortConnect                0x08002c65   Thumb Code   264  ch32f20x_usbhs_host.o(i.USBHS_HUBCheckPortConnect)
-    USBHS_HUBHostEnum                        0x08002d75   Thumb Code  1688  ch32f20x_usbhs_host.o(i.USBHS_HUBHostEnum)
-    USBHS_HUB_Process                        0x0800340d   Thumb Code  2218  ch32f20x_usbhs_host.o(i.USBHS_HUB_Process)
-    USBHS_HostCtrlTransfer                   0x08003dad   Thumb Code   378  ch32f20x_usbhs_host.o(i.USBHS_HostCtrlTransfer)
-    USBHS_HostEnum                           0x08003f3d   Thumb Code   242  ch32f20x_usbhs_host.o(i.USBHS_HostEnum)
-    USBHS_HostInit                           0x08004195   Thumb Code    82  ch32f20x_usbhs_host.o(i.USBHS_HostInit)
-    USBHS_HubClearPortFeature                0x080041f9   Thumb Code   242  ch32f20x_usbhs_host.o(i.USBHS_HubClearPortFeature)
-    USBHS_HubCtrlGetHidDescr                 0x080042f1   Thumb Code    74  ch32f20x_usbhs_host.o(i.USBHS_HubCtrlGetHidDescr)
-    USBHS_HubCtrlTransfer                    0x08004345   Thumb Code   490  ch32f20x_usbhs_host.o(i.USBHS_HubCtrlTransfer)
-    USBHS_HubGetPortStatus                   0x08004539   Thumb Code    92  ch32f20x_usbhs_host.o(i.USBHS_HubGetPortStatus)
-    USBHS_HubSetPortFeature                  0x080045a1   Thumb Code    36  ch32f20x_usbhs_host.o(i.USBHS_HubSetPortFeature)
-    USBHS_HubUSBGetDevDescr                  0x080045c9   Thumb Code    66  ch32f20x_usbhs_host.o(i.USBHS_HubUSBGetDevDescr)
-    USBHS_HubUSBHS_Analysis_Descr            0x08004635   Thumb Code   506  ch32f20x_usbhs_host.o(i.USBHS_HubUSBHS_Analysis_Descr)
-    USBHS_HubUSBSetAddr                      0x080048bd   Thumb Code    62  ch32f20x_usbhs_host.o(i.USBHS_HubUSBSetAddr)
-    USBHS_HubUSBSetIdle                      0x08004901   Thumb Code    54  ch32f20x_usbhs_host.o(i.USBHS_HubUSBSetIdle)
-    USBHS_HubUSBUSBHS_SetConfig              0x0800493d   Thumb Code    62  ch32f20x_usbhs_host.o(i.USBHS_HubUSBUSBHS_SetConfig)
-    USBHS_INT_In_Data                        0x08004981   Thumb Code   164  ch32f20x_usbhs_host.o(i.USBHS_INT_In_Data)
-    USBHS_SSPLITPacket                       0x08004a2d   Thumb Code   366  ch32f20x_usbhs_host.o(i.USBHS_SSPLITPacket)
-    USBHS_SetBusReset                        0x08004ba5   Thumb Code    76  ch32f20x_usbhs_host.o(i.USBHS_SetBusReset)
-    USBHS_USBHostTransact                    0x08004bf9   Thumb Code   342  ch32f20x_usbhs_host.o(i.USBHS_USBHostTransact)
-    USB_DelUSBHS_AddressNumber               0x08004d55   Thumb Code    22  ch32f20x_usbhs_host.o(i.USB_DelUSBHS_AddressNumber)
-    USB_SetUSBHS_AddressNumber               0x08004d71   Thumb Code    34  ch32f20x_usbhs_host.o(i.USB_SetUSBHS_AddressNumber)
-    USB_Sleep_Wakeup_CFG                     0x08004d99   Thumb Code    40  usbd_compostie_km.o(i.USB_Sleep_Wakeup_CFG)
-    UsageFault_Handler                       0x08004dc1   Thumb Code     4  ch32f20x_it.o(i.UsageFault_Handler)
-    _is_digit                                0x08004dc5   Thumb Code    14  __printf_wp.o(i._is_digit)
-    fputc                                    0x08004dd5   Thumb Code    32  debug.o(i.fputc)
-    hex_to_byte                              0x08004df9   Thumb Code    48  main.o(i.hex_to_byte)
-    main                                     0x08004e29   Thumb Code   662  main.o(i.main)
-    parse_hex_report                         0x08005275   Thumb Code   110  main.o(i.parse_hex_report)
-    _get_lc_ctype                            0x080052e5   Thumb Code    44  lc_ctype_c.o(locale$$code)
-    USBHS_GetDevDescrptor                    0x08005348   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    USBHS_GetConfigDescrptor                 0x08005350   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    USBHS_SetAddress                         0x08005358   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    USBHS_SetConfig                          0x08005360   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    USBHS_Clear_EndpStall                    0x08005368   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    USBHS_SetupSetUsbInterface               0x08005370   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    USBHS_SetupClrEndpStall                  0x08005378   Data           8  ch32f20x_usbhs_host.o(.constdata)
-    MyDevDescr                               0x08005380   Data          18  usbd_desc.o(.constdata)
-    MyCfgDescr                               0x08005392   Data          59  usbd_desc.o(.constdata)
-    KeyRepDesc                               0x080053cd   Data          62  usbd_desc.o(.constdata)
-    MouseRepDesc                             0x0800540b   Data          52  usbd_desc.o(.constdata)
-    MyQuaDesc                                0x0800543f   Data          10  usbd_desc.o(.constdata)
-    MyLangDescr                              0x08005449   Data           4  usbd_desc.o(.constdata)
-    MyManuInfo                               0x0800544d   Data          14  usbd_desc.o(.constdata)
-    MyProdInfo                               0x0800545b   Data          18  usbd_desc.o(.constdata)
-    MySerNumInfo                             0x0800546d   Data          22  usbd_desc.o(.constdata)
-    Region$$Table$$Base                      0x08005518   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08005538   Number         0  anon$$obj.o(Region$$Table)
-    __ctype                                  0x08005545   Data           0  lc_ctype_c.o(locale$$data)
+    USBFS_Device_Endp_Init                   0x08001c39   Thumb Code    78  ch32f20x_usbfs_device.o(i.USBFS_Device_Endp_Init)
+    USBFS_Device_Init                        0x08001ca1   Thumb Code   120  ch32f20x_usbfs_device.o(i.USBFS_Device_Init)
+    USBFS_Endp_DataUp                        0x08001d1d   Thumb Code   306  ch32f20x_usbfs_device.o(i.USBFS_Endp_DataUp)
+    USBFS_IRQHandler                         0x08001e55   Thumb Code  2008  ch32f20x_usbfs_device.o(i.USBFS_IRQHandler)
+    USBFS_RCC_Init                           0x08002669   Thumb Code    64  ch32f20x_usbfs_host.o(i.USBFS_RCC_Init)
+    USBFS_Send_Resume                        0x080026b9   Thumb Code    48  ch32f20x_usbfs_device.o(i.USBFS_Send_Resume)
+    USBHS_Analysis_Descr                     0x080026e9   Thumb Code   294  ch32f20x_usbhs_host.o(i.USBHS_Analysis_Descr)
+    USBHS_CSPLITPacket                       0x08002915   Thumb Code   376  ch32f20x_usbhs_host.o(i.USBHS_CSPLITPacket)
+    USBHS_CopySetupReqPkg                    0x08002a95   Thumb Code    24  ch32f20x_usbhs_host.o(i.USBHS_CopySetupReqPkg)
+    USBHS_CtrlGetConfigDescr                 0x08002ab1   Thumb Code   126  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetConfigDescr)
+    USBHS_CtrlGetDevDescr                    0x08002b7d   Thumb Code    78  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetDevDescr)
+    USBHS_CtrlGetReportDescr                 0x08002c11   Thumb Code    50  ch32f20x_usbhs_host.o(i.USBHS_CtrlGetReportDescr)
+    USBHS_CtrlGet_HUBDevDescr                0x08002c4d   Thumb Code    74  ch32f20x_usbhs_host.o(i.USBHS_CtrlGet_HUBDevDescr)
+    USBHS_CtrlSetIdle                        0x08002ca9   Thumb Code    30  ch32f20x_usbhs_host.o(i.USBHS_CtrlSetIdle)
+    USBHS_CtrlSetUsbConfig                   0x08002ccd   Thumb Code    24  ch32f20x_usbhs_host.o(i.USBHS_CtrlSetUsbConfig)
+    USBHS_CtrlUSBHS_SetAddress               0x08002ced   Thumb Code    46  ch32f20x_usbhs_host.o(i.USBHS_CtrlUSBHS_SetAddress)
+    USBHS_CurrentAddr                        0x08002d25   Thumb Code     6  ch32f20x_usbhs_host.o(i.USBHS_CurrentAddr)
+    USBHS_HOST_ClearPortFeature_Process      0x08002d31   Thumb Code    36  ch32f20x_usbhs_host.o(i.USBHS_HOST_ClearPortFeature_Process)
+    USBHS_HUBCheckPortConnect                0x08002d59   Thumb Code   264  ch32f20x_usbhs_host.o(i.USBHS_HUBCheckPortConnect)
+    USBHS_HUBHostEnum                        0x08002e69   Thumb Code  1688  ch32f20x_usbhs_host.o(i.USBHS_HUBHostEnum)
+    USBHS_HUB_Process                        0x08003501   Thumb Code  2218  ch32f20x_usbhs_host.o(i.USBHS_HUB_Process)
+    USBHS_HostCtrlTransfer                   0x08003ea1   Thumb Code   378  ch32f20x_usbhs_host.o(i.USBHS_HostCtrlTransfer)
+    USBHS_HostEnum                           0x08004031   Thumb Code   242  ch32f20x_usbhs_host.o(i.USBHS_HostEnum)
+    USBHS_HostInit                           0x08004289   Thumb Code    82  ch32f20x_usbhs_host.o(i.USBHS_HostInit)
+    USBHS_HubClearPortFeature                0x080042ed   Thumb Code   242  ch32f20x_usbhs_host.o(i.USBHS_HubClearPortFeature)
+    USBHS_HubCtrlGetHidDescr                 0x080043e5   Thumb Code    74  ch32f20x_usbhs_host.o(i.USBHS_HubCtrlGetHidDescr)
+    USBHS_HubCtrlTransfer                    0x08004439   Thumb Code   490  ch32f20x_usbhs_host.o(i.USBHS_HubCtrlTransfer)
+    USBHS_HubGetPortStatus                   0x0800462d   Thumb Code    92  ch32f20x_usbhs_host.o(i.USBHS_HubGetPortStatus)
+    USBHS_HubSetPortFeature                  0x08004695   Thumb Code    36  ch32f20x_usbhs_host.o(i.USBHS_HubSetPortFeature)
+    USBHS_HubUSBGetDevDescr                  0x080046bd   Thumb Code    66  ch32f20x_usbhs_host.o(i.USBHS_HubUSBGetDevDescr)
+    USBHS_HubUSBHS_Analysis_Descr            0x08004729   Thumb Code   506  ch32f20x_usbhs_host.o(i.USBHS_HubUSBHS_Analysis_Descr)
+    USBHS_HubUSBSetAddr                      0x080049b1   Thumb Code    62  ch32f20x_usbhs_host.o(i.USBHS_HubUSBSetAddr)
+    USBHS_HubUSBSetIdle                      0x080049f5   Thumb Code    54  ch32f20x_usbhs_host.o(i.USBHS_HubUSBSetIdle)
+    USBHS_HubUSBUSBHS_SetConfig              0x08004a31   Thumb Code    62  ch32f20x_usbhs_host.o(i.USBHS_HubUSBUSBHS_SetConfig)
+    USBHS_INT_In_Data                        0x08004a75   Thumb Code   164  ch32f20x_usbhs_host.o(i.USBHS_INT_In_Data)
+    USBHS_SSPLITPacket                       0x08004b21   Thumb Code   366  ch32f20x_usbhs_host.o(i.USBHS_SSPLITPacket)
+    USBHS_SetBusReset                        0x08004c99   Thumb Code    76  ch32f20x_usbhs_host.o(i.USBHS_SetBusReset)
+    USBHS_USBHostTransact                    0x08004ced   Thumb Code   342  ch32f20x_usbhs_host.o(i.USBHS_USBHostTransact)
+    USB_DelUSBHS_AddressNumber               0x08004e49   Thumb Code    22  ch32f20x_usbhs_host.o(i.USB_DelUSBHS_AddressNumber)
+    USB_SetUSBHS_AddressNumber               0x08004e65   Thumb Code    34  ch32f20x_usbhs_host.o(i.USB_SetUSBHS_AddressNumber)
+    USB_Sleep_Wakeup_CFG                     0x08004e8d   Thumb Code    40  usbd_compostie_km.o(i.USB_Sleep_Wakeup_CFG)
+    UsageFault_Handler                       0x08004eb5   Thumb Code     4  ch32f20x_it.o(i.UsageFault_Handler)
+    _is_digit                                0x08004eb9   Thumb Code    14  __printf_wp.o(i._is_digit)
+    fputc                                    0x08004ec9   Thumb Code    32  debug.o(i.fputc)
+    hex_to_byte                              0x08004eed   Thumb Code    48  main.o(i.hex_to_byte)
+    main                                     0x08004f1d   Thumb Code   736  main.o(i.main)
+    parse_hex_report                         0x080053b1   Thumb Code   110  main.o(i.parse_hex_report)
+    _get_lc_ctype                            0x08005421   Thumb Code    44  lc_ctype_c.o(locale$$code)
+    USBHS_GetDevDescrptor                    0x08005484   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    USBHS_GetConfigDescrptor                 0x0800548c   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    USBHS_SetAddress                         0x08005494   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    USBHS_SetConfig                          0x0800549c   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    USBHS_Clear_EndpStall                    0x080054a4   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    USBHS_SetupSetUsbInterface               0x080054ac   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    USBHS_SetupClrEndpStall                  0x080054b4   Data           8  ch32f20x_usbhs_host.o(.constdata)
+    MyDevDescr                               0x080054bc   Data          18  usbd_desc.o(.constdata)
+    MyCfgDescr                               0x080054ce   Data          84  usbd_desc.o(.constdata)
+    KeyRepDesc                               0x08005522   Data          62  usbd_desc.o(.constdata)
+    MouseRepDesc                             0x08005560   Data          52  usbd_desc.o(.constdata)
+    Mouse2RepDesc                            0x08005594   Data          52  usbd_desc.o(.constdata)
+    MyQuaDesc                                0x080055c8   Data          10  usbd_desc.o(.constdata)
+    MyLangDescr                              0x080055d2   Data           4  usbd_desc.o(.constdata)
+    MyManuInfo                               0x080055d6   Data          14  usbd_desc.o(.constdata)
+    MyProdInfo                               0x080055e4   Data          18  usbd_desc.o(.constdata)
+    MySerNumInfo                             0x080055f6   Data          22  usbd_desc.o(.constdata)
+    Region$$Table$$Base                      0x080056a4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080056c4   Number         0  anon$$obj.o(Region$$Table)
+    __ctype                                  0x080056d1   Data           0  lc_ctype_c.o(locale$$data)
     MS_DataPack                              0x20000001   Data           4  main.o(.data)
-    KB_DataPack                              0x20000005   Data           8  main.o(.data)
-    indexes                                  0x2000000d   Data           1  main.o(.data)
-    clear_buffer_flag                        0x2000000e   Data           1  main.o(.data)
-    SystemCoreClock                          0x20000010   Data           4  system_ch32f20x.o(.data)
-    AHBPrescTable                            0x20000014   Data          16  system_ch32f20x.o(.data)
-    __stdout                                 0x20000024   Data           4  debug.o(.data)
-    USBHS_Hub_LinkHead                       0x20000040   Data           4  usb_hub.o(.data)
-    USBFS_Hub_LinkHead                       0x20000044   Data           4  usb_hub.o(.data)
-    USBHS_UsbDevEndp0Size                    0x20000049   Data           1  ch32f20x_usbhs_host.o(.data)
-    USBHS_gEndp_Num                          0x2000004a   Data           1  ch32f20x_usbhs_host.o(.data)
-    USBHS_Hid_Report_Len                     0x2000004b   Data           1  ch32f20x_usbhs_host.o(.data)
-    USBHS_EndpnMaxSize                       0x2000004c   Data           2  ch32f20x_usbhs_host.o(.data)
-    MS_Data_Packs                            0x2000004e   Data           4  ch32f20x_usbhs_host.o(.data)
-    KB_Data_Packs                            0x20000052   Data           8  ch32f20x_usbhs_host.o(.data)
-    USBHS_glable_index                       0x2000005a   Data           1  ch32f20x_usbhs_host.o(.data)
-    pUSBFS_Descr                             0x2000005c   Data           4  ch32f20x_usbfs_device.o(.data)
-    USBFS_SetupReqCode                       0x20000060   Data           1  ch32f20x_usbfs_device.o(.data)
-    USBFS_SetupReqType                       0x20000061   Data           1  ch32f20x_usbfs_device.o(.data)
-    USBFS_SetupReqValue                      0x20000062   Data           2  ch32f20x_usbfs_device.o(.data)
-    USBFS_SetupReqIndex                      0x20000064   Data           2  ch32f20x_usbfs_device.o(.data)
-    USBFS_SetupReqLen                        0x20000066   Data           2  ch32f20x_usbfs_device.o(.data)
-    USBFS_DevConfig                          0x20000068   Data           1  ch32f20x_usbfs_device.o(.data)
-    USBFS_DevAddr                            0x20000069   Data           1  ch32f20x_usbfs_device.o(.data)
-    USBFS_DevSleepStatus                     0x2000006a   Data           1  ch32f20x_usbfs_device.o(.data)
-    USBFS_DevEnumStatus                      0x2000006b   Data           1  ch32f20x_usbfs_device.o(.data)
-    USBFS_HidIdle                            0x2000006c   Data           2  ch32f20x_usbfs_device.o(.data)
-    USBFS_HidProtocol                        0x2000006e   Data           2  ch32f20x_usbfs_device.o(.data)
-    USBFS_Endp_Busy                          0x20000070   Data           8  ch32f20x_usbfs_device.o(.data)
-    MS_Scan_Done                             0x20000078   Data           1  usbd_compostie_km.o(.data)
-    MS_Scan_Result                           0x2000007a   Data           2  usbd_compostie_km.o(.data)
-    MS_Data_Pack                             0x2000007c   Data           4  usbd_compostie_km.o(.data)
-    KB_Scan_Done                             0x20000080   Data           1  usbd_compostie_km.o(.data)
-    KB_Scan_Result                           0x20000082   Data           2  usbd_compostie_km.o(.data)
-    KB_Scan_Last_Result                      0x20000084   Data           2  usbd_compostie_km.o(.data)
-    KB_Data_Pack                             0x20000086   Data           8  usbd_compostie_km.o(.data)
-    KB_LED_Last_Status                       0x2000008e   Data           1  usbd_compostie_km.o(.data)
-    KB_LED_Cur_Status                        0x2000008f   Data           1  usbd_compostie_km.o(.data)
-    USART_Recv_Dat                           0x20000090   Data           1  usbd_compostie_km.o(.data)
-    USART_Send_Flag                          0x20000091   Data           1  usbd_compostie_km.o(.data)
-    USART_Send_Cnt                           0x20000092   Data           1  usbd_compostie_km.o(.data)
-    USBHS_endpTXbuf                          0x200000a0   Data        1024  main.o(.bss)
-    USBHS_endpRXbuf                          0x200004a0   Data        1024  main.o(.bss)
-    USBFS_endpTXbuf                          0x200008a0   Data        1024  main.o(.bss)
-    USBFS_endpRXbuf                          0x20000ca0   Data        1024  main.o(.bss)
-    uart4_storage                            0x200010a0   Data         256  main.o(.bss)
-    USBHS_HubInfo                            0x200011a0   Data        1840  usb_hub.o(.bss)
-    USBFS_HubInfo                            0x200018d0   Data        1840  usb_hub.o(.bss)
-    USBHS_thisUsbDev                         0x20002000   Data          24  ch32f20x_usbhs_host.o(.bss)
-    USBHS_AddressNum                         0x20002018   Data         127  ch32f20x_usbhs_host.o(.bss)
-    USBHS_Test_Buf                           0x20002098   Data        3072  ch32f20x_usbhs_host.o(.bss)
-    USBFS_thisUsbDev                         0x20002c98   Data          24  ch32f20x_usbfs_host.o(.bss)
-    USBFS_AddressNum                         0x20002cb0   Data         127  ch32f20x_usbfs_host.o(.bss)
-    RootHubDev                               0x20002d2f   Data          62  ch32f20x_usbfs_host.o(.bss)
-    USBFS_test_buf                           0x20002d70   Data        3072  ch32f20x_usbfs_host.o(.bss)
-    Com_Buf                                  0x20003970   Data        1024  ch32f20x_usbfs_host.o(.bss)
-    DevDesc_Buf                              0x20003d70   Data          18  ch32f20x_usbfs_host.o(.bss)
-    USBFS_EP0_Buf                            0x20003d84   Data          64  ch32f20x_usbfs_device.o(.bss)
-    USBFS_EP1_Buf                            0x20003dc4   Data          64  ch32f20x_usbfs_device.o(.bss)
-    USBFS_EP2_Buf                            0x20003e04   Data          64  ch32f20x_usbfs_device.o(.bss)
-    __libspace_start                         0x20003e44   Data          96  libspace.o(.bss)
-    __temporary_stack_top$libspace           0x20003ea4   Data           0  libspace.o(.bss)
+    MS2_DataPack                             0x20000005   Data           4  main.o(.data)
+    KB_DataPack                              0x20000009   Data           8  main.o(.data)
+    indexes                                  0x20000011   Data           1  main.o(.data)
+    clear_buffer_flag                        0x20000012   Data           1  main.o(.data)
+    SystemCoreClock                          0x20000014   Data           4  system_ch32f20x.o(.data)
+    AHBPrescTable                            0x20000018   Data          16  system_ch32f20x.o(.data)
+    __stdout                                 0x20000028   Data           4  debug.o(.data)
+    USBHS_Hub_LinkHead                       0x20000044   Data           4  usb_hub.o(.data)
+    USBFS_Hub_LinkHead                       0x20000048   Data           4  usb_hub.o(.data)
+    USBHS_UsbDevEndp0Size                    0x2000004d   Data           1  ch32f20x_usbhs_host.o(.data)
+    USBHS_gEndp_Num                          0x2000004e   Data           1  ch32f20x_usbhs_host.o(.data)
+    USBHS_Hid_Report_Len                     0x2000004f   Data           1  ch32f20x_usbhs_host.o(.data)
+    USBHS_EndpnMaxSize                       0x20000050   Data           2  ch32f20x_usbhs_host.o(.data)
+    MS_Data_Packs                            0x20000052   Data           4  ch32f20x_usbhs_host.o(.data)
+    KB_Data_Packs                            0x20000056   Data           8  ch32f20x_usbhs_host.o(.data)
+    USBHS_glable_index                       0x2000005e   Data           1  ch32f20x_usbhs_host.o(.data)
+    pUSBFS_Descr                             0x20000060   Data           4  ch32f20x_usbfs_device.o(.data)
+    USBFS_SetupReqCode                       0x20000064   Data           1  ch32f20x_usbfs_device.o(.data)
+    USBFS_SetupReqType                       0x20000065   Data           1  ch32f20x_usbfs_device.o(.data)
+    USBFS_SetupReqValue                      0x20000066   Data           2  ch32f20x_usbfs_device.o(.data)
+    USBFS_SetupReqIndex                      0x20000068   Data           2  ch32f20x_usbfs_device.o(.data)
+    USBFS_SetupReqLen                        0x2000006a   Data           2  ch32f20x_usbfs_device.o(.data)
+    USBFS_DevConfig                          0x2000006c   Data           1  ch32f20x_usbfs_device.o(.data)
+    USBFS_DevAddr                            0x2000006d   Data           1  ch32f20x_usbfs_device.o(.data)
+    USBFS_DevSleepStatus                     0x2000006e   Data           1  ch32f20x_usbfs_device.o(.data)
+    USBFS_DevEnumStatus                      0x2000006f   Data           1  ch32f20x_usbfs_device.o(.data)
+    USBFS_HidIdle                            0x20000070   Data           3  ch32f20x_usbfs_device.o(.data)
+    USBFS_HidProtocol                        0x20000073   Data           3  ch32f20x_usbfs_device.o(.data)
+    USBFS_Endp_Busy                          0x20000076   Data           8  ch32f20x_usbfs_device.o(.data)
+    MS_Scan_Done                             0x2000007e   Data           1  usbd_compostie_km.o(.data)
+    MS_Scan_Result                           0x20000080   Data           2  usbd_compostie_km.o(.data)
+    MS_Data_Pack                             0x20000082   Data           4  usbd_compostie_km.o(.data)
+    KB_Scan_Done                             0x20000086   Data           1  usbd_compostie_km.o(.data)
+    KB_Scan_Result                           0x20000088   Data           2  usbd_compostie_km.o(.data)
+    KB_Scan_Last_Result                      0x2000008a   Data           2  usbd_compostie_km.o(.data)
+    KB_Data_Pack                             0x2000008c   Data           8  usbd_compostie_km.o(.data)
+    KB_LED_Last_Status                       0x20000094   Data           1  usbd_compostie_km.o(.data)
+    KB_LED_Cur_Status                        0x20000095   Data           1  usbd_compostie_km.o(.data)
+    USART_Recv_Dat                           0x20000096   Data           1  usbd_compostie_km.o(.data)
+    USART_Send_Flag                          0x20000097   Data           1  usbd_compostie_km.o(.data)
+    USART_Send_Cnt                           0x20000098   Data           1  usbd_compostie_km.o(.data)
+    USBHS_endpTXbuf                          0x200000a8   Data        1024  main.o(.bss)
+    USBHS_endpRXbuf                          0x200004a8   Data        1024  main.o(.bss)
+    USBFS_endpTXbuf                          0x200008a8   Data        1024  main.o(.bss)
+    USBFS_endpRXbuf                          0x20000ca8   Data        1024  main.o(.bss)
+    uart4_storage                            0x200010a8   Data         256  main.o(.bss)
+    USBHS_HubInfo                            0x200011a8   Data        1840  usb_hub.o(.bss)
+    USBFS_HubInfo                            0x200018d8   Data        1840  usb_hub.o(.bss)
+    USBHS_thisUsbDev                         0x20002008   Data          24  ch32f20x_usbhs_host.o(.bss)
+    USBHS_AddressNum                         0x20002020   Data         127  ch32f20x_usbhs_host.o(.bss)
+    USBHS_Test_Buf                           0x200020a0   Data        3072  ch32f20x_usbhs_host.o(.bss)
+    USBFS_thisUsbDev                         0x20002ca0   Data          24  ch32f20x_usbfs_host.o(.bss)
+    USBFS_AddressNum                         0x20002cb8   Data         127  ch32f20x_usbfs_host.o(.bss)
+    RootHubDev                               0x20002d37   Data          62  ch32f20x_usbfs_host.o(.bss)
+    USBFS_test_buf                           0x20002d78   Data        3072  ch32f20x_usbfs_host.o(.bss)
+    Com_Buf                                  0x20003978   Data        1024  ch32f20x_usbfs_host.o(.bss)
+    DevDesc_Buf                              0x20003d78   Data          18  ch32f20x_usbfs_host.o(.bss)
+    USBFS_EP0_Buf                            0x20003d8c   Data          64  ch32f20x_usbfs_device.o(.bss)
+    USBFS_EP1_Buf                            0x20003dcc   Data          64  ch32f20x_usbfs_device.o(.bss)
+    USBFS_EP2_Buf                            0x20003e0c   Data          64  ch32f20x_usbfs_device.o(.bss)
+    USBFS_EP3_Buf                            0x20003e4c   Data          64  ch32f20x_usbfs_device.o(.bss)
+    __libspace_start                         0x20003e8c   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20003eec   Data           0  libspace.o(.bss)
 
 
 
@@ -2382,253 +2375,254 @@ Memory Map of the image
 
   Image Entry point : 0x080001a1
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000056e8, Max: 0x00040000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000587c, Max: 0x00040000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00005648, Max: 0x00040000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000057d4, Max: 0x00040000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000001a0   Data   RO          286    RESET               startup_ch32f20x_d8c.o
-    0x080001a0   0x080001a0   0x00000008   Code   RO         4590  * !!!main             c_w.l(__main.o)
-    0x080001a8   0x080001a8   0x00000034   Code   RO         4820    !!!scatter          c_w.l(__scatter.o)
-    0x080001dc   0x080001dc   0x0000001a   Code   RO         4822    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x08000000   0x08000000   0x000001a0   Data   RO          280    RESET               startup_ch32f20x_d8c.o
+    0x080001a0   0x080001a0   0x00000008   Code   RO         4584  * !!!main             c_w.l(__main.o)
+    0x080001a8   0x080001a8   0x00000034   Code   RO         4814    !!!scatter          c_w.l(__scatter.o)
+    0x080001dc   0x080001dc   0x0000001a   Code   RO         4816    !!handler_copy      c_w.l(__scatter_copy.o)
     0x080001f6   0x080001f6   0x00000002   PAD
-    0x080001f8   0x080001f8   0x0000001c   Code   RO         4824    !!handler_zi        c_w.l(__scatter_zi.o)
-    0x08000214   0x08000214   0x00000000   Code   RO         4581    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
-    0x08000214   0x08000214   0x00000006   Code   RO         4580    .ARM.Collect$$_printf_percent$$00000009  c_w.l(_printf_d.o)
-    0x0800021a   0x0800021a   0x00000006   Code   RO         4579    .ARM.Collect$$_printf_percent$$0000000C  c_w.l(_printf_x.o)
-    0x08000220   0x08000220   0x00000006   Code   RO         4578    .ARM.Collect$$_printf_percent$$00000014  c_w.l(_printf_s.o)
-    0x08000226   0x08000226   0x00000004   Code   RO         4631    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
-    0x0800022a   0x0800022a   0x00000002   Code   RO         4757    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
-    0x0800022c   0x0800022c   0x00000000   Code   RO         4640    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
-    0x0800022c   0x0800022c   0x00000000   Code   RO         4642    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
-    0x0800022c   0x0800022c   0x00000008   Code   RO         4643    .ARM.Collect$$libinit$$00000005  c_w.l(libinit2.o)
-    0x08000234   0x08000234   0x00000000   Code   RO         4645    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
-    0x08000234   0x08000234   0x00000000   Code   RO         4647    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
-    0x08000234   0x08000234   0x00000000   Code   RO         4649    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
-    0x08000234   0x08000234   0x00000006   Code   RO         4650    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
-    0x0800023a   0x0800023a   0x00000000   Code   RO         4652    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
-    0x0800023a   0x0800023a   0x0000000c   Code   RO         4653    .ARM.Collect$$libinit$$00000012  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4654    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4656    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4658    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4660    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4662    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4664    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4666    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4668    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4670    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4672    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4676    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4678    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4680    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000000   Code   RO         4682    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
-    0x08000246   0x08000246   0x00000002   Code   RO         4683    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
-    0x08000248   0x08000248   0x00000002   Code   RO         4817    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
-    0x0800024a   0x0800024a   0x00000000   Code   RO         4771    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
-    0x0800024a   0x0800024a   0x00000000   Code   RO         4773    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
-    0x0800024a   0x0800024a   0x00000000   Code   RO         4775    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
-    0x0800024a   0x0800024a   0x00000000   Code   RO         4778    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
-    0x0800024a   0x0800024a   0x00000000   Code   RO         4781    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
-    0x0800024a   0x0800024a   0x00000000   Code   RO         4783    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
-    0x0800024a   0x0800024a   0x00000000   Code   RO         4786    .ARM.Collect$$libshutdown$$00000011  c_w.l(libshutdown2.o)
-    0x0800024a   0x0800024a   0x00000002   Code   RO         4787    .ARM.Collect$$libshutdown$$00000012  c_w.l(libshutdown2.o)
-    0x0800024c   0x0800024c   0x00000000   Code   RO         4594    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
-    0x0800024c   0x0800024c   0x00000000   Code   RO         4690    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
-    0x0800024c   0x0800024c   0x00000006   Code   RO         4702    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
-    0x08000252   0x08000252   0x00000000   Code   RO         4692    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
-    0x08000252   0x08000252   0x00000004   Code   RO         4693    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
-    0x08000256   0x08000256   0x00000000   Code   RO         4695    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
-    0x08000256   0x08000256   0x00000008   Code   RO         4696    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
-    0x0800025e   0x0800025e   0x00000002   Code   RO         4760    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
-    0x08000260   0x08000260   0x00000000   Code   RO         4791    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
-    0x08000260   0x08000260   0x00000004   Code   RO         4792    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
-    0x08000264   0x08000264   0x00000006   Code   RO         4793    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x080001f8   0x080001f8   0x0000001c   Code   RO         4818    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x08000214   0x08000214   0x00000000   Code   RO         4575    .ARM.Collect$$_printf_percent$$00000000  c_w.l(_printf_percent.o)
+    0x08000214   0x08000214   0x00000006   Code   RO         4574    .ARM.Collect$$_printf_percent$$00000009  c_w.l(_printf_d.o)
+    0x0800021a   0x0800021a   0x00000006   Code   RO         4573    .ARM.Collect$$_printf_percent$$0000000C  c_w.l(_printf_x.o)
+    0x08000220   0x08000220   0x00000006   Code   RO         4572    .ARM.Collect$$_printf_percent$$00000014  c_w.l(_printf_s.o)
+    0x08000226   0x08000226   0x00000004   Code   RO         4625    .ARM.Collect$$_printf_percent$$00000017  c_w.l(_printf_percent_end.o)
+    0x0800022a   0x0800022a   0x00000002   Code   RO         4751    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x0800022c   0x0800022c   0x00000000   Code   RO         4634    .ARM.Collect$$libinit$$00000002  c_w.l(libinit2.o)
+    0x0800022c   0x0800022c   0x00000000   Code   RO         4636    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x0800022c   0x0800022c   0x00000008   Code   RO         4637    .ARM.Collect$$libinit$$00000005  c_w.l(libinit2.o)
+    0x08000234   0x08000234   0x00000000   Code   RO         4639    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x08000234   0x08000234   0x00000000   Code   RO         4641    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x08000234   0x08000234   0x00000000   Code   RO         4643    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x08000234   0x08000234   0x00000006   Code   RO         4644    .ARM.Collect$$libinit$$0000000F  c_w.l(libinit2.o)
+    0x0800023a   0x0800023a   0x00000000   Code   RO         4646    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x0800023a   0x0800023a   0x0000000c   Code   RO         4647    .ARM.Collect$$libinit$$00000012  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4648    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4650    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4652    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4654    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4656    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4658    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4660    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4662    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4664    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4666    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4670    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4672    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4674    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000000   Code   RO         4676    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x08000246   0x08000246   0x00000002   Code   RO         4677    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x08000248   0x08000248   0x00000002   Code   RO         4811    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x0800024a   0x0800024a   0x00000000   Code   RO         4765    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x0800024a   0x0800024a   0x00000000   Code   RO         4767    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x0800024a   0x0800024a   0x00000000   Code   RO         4769    .ARM.Collect$$libshutdown$$00000006  c_w.l(libshutdown2.o)
+    0x0800024a   0x0800024a   0x00000000   Code   RO         4772    .ARM.Collect$$libshutdown$$00000009  c_w.l(libshutdown2.o)
+    0x0800024a   0x0800024a   0x00000000   Code   RO         4775    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x0800024a   0x0800024a   0x00000000   Code   RO         4777    .ARM.Collect$$libshutdown$$0000000E  c_w.l(libshutdown2.o)
+    0x0800024a   0x0800024a   0x00000000   Code   RO         4780    .ARM.Collect$$libshutdown$$00000011  c_w.l(libshutdown2.o)
+    0x0800024a   0x0800024a   0x00000002   Code   RO         4781    .ARM.Collect$$libshutdown$$00000012  c_w.l(libshutdown2.o)
+    0x0800024c   0x0800024c   0x00000000   Code   RO         4588    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x0800024c   0x0800024c   0x00000000   Code   RO         4684    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x0800024c   0x0800024c   0x00000006   Code   RO         4696    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x08000252   0x08000252   0x00000000   Code   RO         4686    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x08000252   0x08000252   0x00000004   Code   RO         4687    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x08000256   0x08000256   0x00000000   Code   RO         4689    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x08000256   0x08000256   0x00000008   Code   RO         4690    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0800025e   0x0800025e   0x00000002   Code   RO         4754    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x08000260   0x08000260   0x00000000   Code   RO         4785    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x08000260   0x08000260   0x00000004   Code   RO         4786    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x08000264   0x08000264   0x00000006   Code   RO         4787    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
     0x0800026a   0x0800026a   0x00000002   PAD
-    0x0800026c   0x0800026c   0x00000000   Code   RO         4706    .emb_text           c_w.l(maybetermalloc1.o)
-    0x0800026c   0x0800026c   0x00000040   Code   RO          287    .text               startup_ch32f20x_d8c.o
-    0x080002ac   0x080002ac   0x00000010   Code   RO         4461    .text               c_w.l(rt_ctype_table.o)
-    0x080002bc   0x080002bc   0x0000005e   Code   RO         4467    .text               c_w.l(h1_alloc.o)
-    0x0800031a   0x0800031a   0x0000004e   Code   RO         4469    .text               c_w.l(h1_free.o)
-    0x08000368   0x08000368   0x00000018   Code   RO         4527    .text               c_w.l(noretval__2printf.o)
-    0x08000380   0x08000380   0x0000004e   Code   RO         4531    .text               c_w.l(_printf_pad.o)
-    0x080003ce   0x080003ce   0x00000052   Code   RO         4533    .text               c_w.l(_printf_str.o)
-    0x08000420   0x08000420   0x00000078   Code   RO         4535    .text               c_w.l(_printf_dec.o)
-    0x08000498   0x08000498   0x00000058   Code   RO         4540    .text               c_w.l(_printf_hex_int.o)
-    0x080004f0   0x080004f0   0x00000138   Code   RO         4570    .text               c_w.l(__printf_flags_wp.o)
-    0x08000628   0x08000628   0x0000008a   Code   RO         4582    .text               c_w.l(rt_memcpy_v6.o)
-    0x080006b2   0x080006b2   0x00000064   Code   RO         4584    .text               c_w.l(rt_memcpy_w.o)
-    0x08000716   0x08000716   0x00000044   Code   RO         4586    .text               c_w.l(rt_memclr.o)
-    0x0800075a   0x0800075a   0x00000006   Code   RO         4588    .text               c_w.l(heapauxi.o)
-    0x08000760   0x08000760   0x00000008   Code   RO         4598    .text               c_w.l(rt_heap_descriptor_intlibspace.o)
-    0x08000768   0x08000768   0x00000008   Code   RO         4603    .text               c_w.l(rt_locale_intlibspace.o)
-    0x08000770   0x08000770   0x00000004   Code   RO         4605    .text               c_w.l(hguard.o)
-    0x08000774   0x08000774   0x0000008a   Code   RO         4607    .text               c_w.l(init_alloc.o)
-    0x080007fe   0x080007fe   0x0000000e   Code   RO         4611    .text               c_w.l(h1_init.o)
-    0x0800080c   0x0800080c   0x000000b2   Code   RO         4625    .text               c_w.l(_printf_intcommon.o)
-    0x080008be   0x080008be   0x0000002c   Code   RO         4627    .text               c_w.l(_printf_char.o)
+    0x0800026c   0x0800026c   0x00000000   Code   RO         4700    .emb_text           c_w.l(maybetermalloc1.o)
+    0x0800026c   0x0800026c   0x00000040   Code   RO          281    .text               startup_ch32f20x_d8c.o
+    0x080002ac   0x080002ac   0x00000010   Code   RO         4455    .text               c_w.l(rt_ctype_table.o)
+    0x080002bc   0x080002bc   0x0000005e   Code   RO         4461    .text               c_w.l(h1_alloc.o)
+    0x0800031a   0x0800031a   0x0000004e   Code   RO         4463    .text               c_w.l(h1_free.o)
+    0x08000368   0x08000368   0x00000018   Code   RO         4521    .text               c_w.l(noretval__2printf.o)
+    0x08000380   0x08000380   0x0000004e   Code   RO         4525    .text               c_w.l(_printf_pad.o)
+    0x080003ce   0x080003ce   0x00000052   Code   RO         4527    .text               c_w.l(_printf_str.o)
+    0x08000420   0x08000420   0x00000078   Code   RO         4529    .text               c_w.l(_printf_dec.o)
+    0x08000498   0x08000498   0x00000058   Code   RO         4534    .text               c_w.l(_printf_hex_int.o)
+    0x080004f0   0x080004f0   0x00000138   Code   RO         4564    .text               c_w.l(__printf_flags_wp.o)
+    0x08000628   0x08000628   0x0000008a   Code   RO         4576    .text               c_w.l(rt_memcpy_v6.o)
+    0x080006b2   0x080006b2   0x00000064   Code   RO         4578    .text               c_w.l(rt_memcpy_w.o)
+    0x08000716   0x08000716   0x00000044   Code   RO         4580    .text               c_w.l(rt_memclr.o)
+    0x0800075a   0x0800075a   0x00000006   Code   RO         4582    .text               c_w.l(heapauxi.o)
+    0x08000760   0x08000760   0x00000008   Code   RO         4592    .text               c_w.l(rt_heap_descriptor_intlibspace.o)
+    0x08000768   0x08000768   0x00000008   Code   RO         4597    .text               c_w.l(rt_locale_intlibspace.o)
+    0x08000770   0x08000770   0x00000004   Code   RO         4599    .text               c_w.l(hguard.o)
+    0x08000774   0x08000774   0x0000008a   Code   RO         4601    .text               c_w.l(init_alloc.o)
+    0x080007fe   0x080007fe   0x0000000e   Code   RO         4605    .text               c_w.l(h1_init.o)
+    0x0800080c   0x0800080c   0x000000b2   Code   RO         4619    .text               c_w.l(_printf_intcommon.o)
+    0x080008be   0x080008be   0x0000002c   Code   RO         4621    .text               c_w.l(_printf_char.o)
     0x080008ea   0x080008ea   0x00000002   PAD
-    0x080008ec   0x080008ec   0x00000024   Code   RO         4629    .text               c_w.l(_printf_char_file.o)
-    0x08000910   0x08000910   0x0000004e   Code   RO         4635    .text               c_w.l(rt_memclr_w.o)
+    0x080008ec   0x080008ec   0x00000024   Code   RO         4623    .text               c_w.l(_printf_char_file.o)
+    0x08000910   0x08000910   0x0000004e   Code   RO         4629    .text               c_w.l(rt_memclr_w.o)
     0x0800095e   0x0800095e   0x00000002   PAD
-    0x08000960   0x08000960   0x00000008   Code   RO         4686    .text               c_w.l(libspace.o)
-    0x08000968   0x08000968   0x00000034   Code   RO         4708    .text               c_w.l(h1_extend.o)
-    0x0800099c   0x0800099c   0x00000030   Code   RO         4712    .text               c_w.l(_printf_char_common.o)
-    0x080009cc   0x080009cc   0x00000008   Code   RO         4714    .text               c_w.l(ferror.o)
-    0x080009d4   0x080009d4   0x0000000e   Code   RO         4718    .text               c_w.l(defsig_rtmem_outer.o)
+    0x08000960   0x08000960   0x00000008   Code   RO         4680    .text               c_w.l(libspace.o)
+    0x08000968   0x08000968   0x00000034   Code   RO         4702    .text               c_w.l(h1_extend.o)
+    0x0800099c   0x0800099c   0x00000030   Code   RO         4706    .text               c_w.l(_printf_char_common.o)
+    0x080009cc   0x080009cc   0x00000008   Code   RO         4708    .text               c_w.l(ferror.o)
+    0x080009d4   0x080009d4   0x0000000e   Code   RO         4712    .text               c_w.l(defsig_rtmem_outer.o)
     0x080009e2   0x080009e2   0x00000002   PAD
-    0x080009e4   0x080009e4   0x00000080   Code   RO         4722    .text               c_w.l(strcmpv7m.o)
-    0x08000a64   0x08000a64   0x00000002   Code   RO         4731    .text               c_w.l(use_no_semi.o)
-    0x08000a66   0x08000a66   0x00000000   Code   RO         4733    .text               c_w.l(indicate_semi.o)
-    0x08000a66   0x08000a66   0x0000004a   Code   RO         4734    .text               c_w.l(sys_stackheap_outer.o)
-    0x08000ab0   0x08000ab0   0x00000012   Code   RO         4742    .text               c_w.l(exit.o)
-    0x08000ac2   0x08000ac2   0x0000000a   Code   RO         4744    .text               c_w.l(defsig_exit.o)
-    0x08000acc   0x08000acc   0x00000050   Code   RO         4746    .text               c_w.l(defsig_rtmem_inner.o)
-    0x08000b1c   0x08000b1c   0x0000000c   Code   RO         4758    .text               c_w.l(sys_exit.o)
-    0x08000b28   0x08000b28   0x00000032   Code   RO         4768    .text               c_w.l(defsig_general.o)
-    0x08000b5a   0x08000b5a   0x0000000e   Code   RO         4788    .text               c_w.l(sys_wrch.o)
+    0x080009e4   0x080009e4   0x00000080   Code   RO         4716    .text               c_w.l(strcmpv7m.o)
+    0x08000a64   0x08000a64   0x00000002   Code   RO         4725    .text               c_w.l(use_no_semi.o)
+    0x08000a66   0x08000a66   0x00000000   Code   RO         4727    .text               c_w.l(indicate_semi.o)
+    0x08000a66   0x08000a66   0x0000004a   Code   RO         4728    .text               c_w.l(sys_stackheap_outer.o)
+    0x08000ab0   0x08000ab0   0x00000012   Code   RO         4736    .text               c_w.l(exit.o)
+    0x08000ac2   0x08000ac2   0x0000000a   Code   RO         4738    .text               c_w.l(defsig_exit.o)
+    0x08000acc   0x08000acc   0x00000050   Code   RO         4740    .text               c_w.l(defsig_rtmem_inner.o)
+    0x08000b1c   0x08000b1c   0x0000000c   Code   RO         4752    .text               c_w.l(sys_exit.o)
+    0x08000b28   0x08000b28   0x00000032   Code   RO         4762    .text               c_w.l(defsig_general.o)
+    0x08000b5a   0x08000b5a   0x0000000e   Code   RO         4782    .text               c_w.l(sys_wrch.o)
     0x08000b68   0x08000b68   0x00000004   Code   RO            1    i.BusFault_Handler  ch32f20x_it.o
     0x08000b6c   0x08000b6c   0x00000004   Code   RO            2    i.DebugMon_Handler  ch32f20x_it.o
-    0x08000b70   0x08000b70   0x00000044   Code   RO          302    i.Delay_Init        debug.o
-    0x08000bb4   0x08000bb4   0x0000004c   Code   RO          303    i.Delay_Ms          debug.o
-    0x08000c00   0x08000c00   0x0000004c   Code   RO          304    i.Delay_Us          debug.o
-    0x08000c4c   0x08000c4c   0x0000000c   Code   RO         1067    i.EXTI_ClearFlag    ch32f20x_exti.o
-    0x08000c58   0x08000c58   0x00000018   Code   RO         1071    i.EXTI_GetFlagStatus  ch32f20x_exti.o
-    0x08000c70   0x08000c70   0x00000094   Code   RO         1073    i.EXTI_Init         ch32f20x_exti.o
-    0x08000d04   0x08000d04   0x00000116   Code   RO         1421    i.GPIO_Init         ch32f20x_gpio.o
+    0x08000b70   0x08000b70   0x00000044   Code   RO          296    i.Delay_Init        debug.o
+    0x08000bb4   0x08000bb4   0x0000004c   Code   RO          297    i.Delay_Ms          debug.o
+    0x08000c00   0x08000c00   0x0000004c   Code   RO          298    i.Delay_Us          debug.o
+    0x08000c4c   0x08000c4c   0x0000000c   Code   RO         1061    i.EXTI_ClearFlag    ch32f20x_exti.o
+    0x08000c58   0x08000c58   0x00000018   Code   RO         1065    i.EXTI_GetFlagStatus  ch32f20x_exti.o
+    0x08000c70   0x08000c70   0x00000094   Code   RO         1067    i.EXTI_Init         ch32f20x_exti.o
+    0x08000d04   0x08000d04   0x00000116   Code   RO         1415    i.GPIO_Init         ch32f20x_gpio.o
     0x08000e1a   0x08000e1a   0x00000002   PAD
-    0x08000e1c   0x08000e1c   0x000000d0   Code   RO         1423    i.GPIO_PinRemapConfig  ch32f20x_gpio.o
-    0x08000eec   0x08000eec   0x00000008   Code   RO         1424    i.GPIO_ReadInputData  ch32f20x_gpio.o
+    0x08000e1c   0x08000e1c   0x000000d0   Code   RO         1417    i.GPIO_PinRemapConfig  ch32f20x_gpio.o
+    0x08000eec   0x08000eec   0x00000008   Code   RO         1418    i.GPIO_ReadInputData  ch32f20x_gpio.o
     0x08000ef4   0x08000ef4   0x00000004   Code   RO            3    i.HardFault_Handler  ch32f20x_it.o
-    0x08000ef8   0x08000ef8   0x00000090   Code   RO         3588    i.HubUSBHS_CtrlGetConfigDescr  ch32f20x_usbhs_host.o
-    0x08000f88   0x08000f88   0x0000007e   Code   RO         3519    i.Hublink_DeleteHubData  usb_hub.o
-    0x08001006   0x08001006   0x00000028   Code   RO         3520    i.Hublink_InitHubLink  usb_hub.o
-    0x0800102e   0x0800102e   0x0000004c   Code   RO         3521    i.Hublink_InsertHubData  usb_hub.o
-    0x0800107a   0x0800107a   0x00000052   Code   RO         3522    i.Hublink_ModifyHubData  usb_hub.o
-    0x080010cc   0x080010cc   0x00000046   Code   RO         3523    i.Hublink_SearchHubData  usb_hub.o
-    0x08001112   0x08001112   0x0000002a   Code   RO         3524    i.Hublink_finesubstructures  usb_hub.o
-    0x0800113c   0x0800113c   0x000000d0   Code   RO         3525    i.Hublink_judgingstructures  usb_hub.o
-    0x0800120c   0x0800120c   0x00000078   Code   RO         4343    i.KB_Scan           usbd_compostie_km.o
-    0x08001284   0x08001284   0x00000074   Code   RO         4347    i.MCU_Sleep_Wakeup_Operate  usbd_compostie_km.o
-    0x080012f8   0x080012f8   0x00000068   Code   RO         4348    i.MS_Scan           usbd_compostie_km.o
+    0x08000ef8   0x08000ef8   0x00000090   Code   RO         3582    i.HubUSBHS_CtrlGetConfigDescr  ch32f20x_usbhs_host.o
+    0x08000f88   0x08000f88   0x0000007e   Code   RO         3513    i.Hublink_DeleteHubData  usb_hub.o
+    0x08001006   0x08001006   0x00000028   Code   RO         3514    i.Hublink_InitHubLink  usb_hub.o
+    0x0800102e   0x0800102e   0x0000004c   Code   RO         3515    i.Hublink_InsertHubData  usb_hub.o
+    0x0800107a   0x0800107a   0x00000052   Code   RO         3516    i.Hublink_ModifyHubData  usb_hub.o
+    0x080010cc   0x080010cc   0x00000046   Code   RO         3517    i.Hublink_SearchHubData  usb_hub.o
+    0x08001112   0x08001112   0x0000002a   Code   RO         3518    i.Hublink_finesubstructures  usb_hub.o
+    0x0800113c   0x0800113c   0x000000d0   Code   RO         3519    i.Hublink_judgingstructures  usb_hub.o
+    0x0800120c   0x0800120c   0x00000078   Code   RO         4337    i.KB_Scan           usbd_compostie_km.o
+    0x08001284   0x08001284   0x00000074   Code   RO         4341    i.MCU_Sleep_Wakeup_Operate  usbd_compostie_km.o
+    0x080012f8   0x080012f8   0x00000068   Code   RO         4342    i.MS_Scan           usbd_compostie_km.o
     0x08001360   0x08001360   0x00000004   Code   RO            4    i.MemManage_Handler  ch32f20x_it.o
     0x08001364   0x08001364   0x00000004   Code   RO            5    i.NMI_Handler       ch32f20x_it.o
-    0x08001368   0x08001368   0x00000070   Code   RO         1780    i.NVIC_Init         ch32f20x_misc.o
-    0x080013d8   0x080013d8   0x00000040   Code   RO         1876    i.PWR_EnterSTOPMode  ch32f20x_pwr.o
+    0x08001368   0x08001368   0x00000070   Code   RO         1774    i.NVIC_Init         ch32f20x_misc.o
+    0x080013d8   0x080013d8   0x00000040   Code   RO         1870    i.PWR_EnterSTOPMode  ch32f20x_pwr.o
     0x08001418   0x08001418   0x00000004   Code   RO            6    i.PendSV_Handler    ch32f20x_it.o
-    0x0800141c   0x0800141c   0x00000020   Code   RO         1960    i.RCC_AHBPeriphClockCmd  ch32f20x_rcc.o
-    0x0800143c   0x0800143c   0x00000020   Code   RO         1962    i.RCC_APB1PeriphClockCmd  ch32f20x_rcc.o
-    0x0800145c   0x0800145c   0x00000020   Code   RO         1964    i.RCC_APB2PeriphClockCmd  ch32f20x_rcc.o
-    0x0800147c   0x0800147c   0x00000194   Code   RO         1975    i.RCC_GetClocksFreq  ch32f20x_rcc.o
-    0x08001610   0x08001610   0x0000001c   Code   RO         2004    i.RCC_USBFSCLKConfig  ch32f20x_rcc.o
+    0x0800141c   0x0800141c   0x00000020   Code   RO         1954    i.RCC_AHBPeriphClockCmd  ch32f20x_rcc.o
+    0x0800143c   0x0800143c   0x00000020   Code   RO         1956    i.RCC_APB1PeriphClockCmd  ch32f20x_rcc.o
+    0x0800145c   0x0800145c   0x00000020   Code   RO         1958    i.RCC_APB2PeriphClockCmd  ch32f20x_rcc.o
+    0x0800147c   0x0800147c   0x00000194   Code   RO         1969    i.RCC_GetClocksFreq  ch32f20x_rcc.o
+    0x08001610   0x08001610   0x0000001c   Code   RO         1998    i.RCC_USBFSCLKConfig  ch32f20x_rcc.o
     0x0800162c   0x0800162c   0x00000004   Code   RO            7    i.SVC_Handler       ch32f20x_it.o
-    0x08001630   0x08001630   0x00000008   Code   RO          250    i.SetSysClock       system_ch32f20x.o
-    0x08001638   0x08001638   0x000000bc   Code   RO          251    i.SetSysClockTo48_HSE  system_ch32f20x.o
-    0x080016f4   0x080016f4   0x00000028   Code   RO         1784    i.SysTick_CLKSourceConfig  ch32f20x_misc.o
+    0x08001630   0x08001630   0x00000008   Code   RO          244    i.SetSysClock       system_ch32f20x.o
+    0x08001638   0x08001638   0x000000bc   Code   RO          245    i.SetSysClockTo48_HSE  system_ch32f20x.o
+    0x080016f4   0x080016f4   0x00000028   Code   RO         1778    i.SysTick_CLKSourceConfig  ch32f20x_misc.o
     0x0800171c   0x0800171c   0x00000004   Code   RO            8    i.SysTick_Handler   ch32f20x_it.o
-    0x08001720   0x08001720   0x00000174   Code   RO          252    i.SystemCoreClockUpdate  system_ch32f20x.o
-    0x08001894   0x08001894   0x0000006c   Code   RO          253    i.SystemInit        system_ch32f20x.o
-    0x08001900   0x08001900   0x0000003c   Code   RO         4352    i.TIM3_IRQHandler   usbd_compostie_km.o
-    0x0800193c   0x0800193c   0x00000006   Code   RO         2760    i.TIM_ClearITPendingBit  ch32f20x_tim.o
-    0x08001942   0x08001942   0x00000022   Code   RO         2786    i.TIM_GetITStatus   ch32f20x_tim.o
+    0x08001720   0x08001720   0x00000174   Code   RO          246    i.SystemCoreClockUpdate  system_ch32f20x.o
+    0x08001894   0x08001894   0x0000006c   Code   RO          247    i.SystemInit        system_ch32f20x.o
+    0x08001900   0x08001900   0x0000003c   Code   RO         4346    i.TIM3_IRQHandler   usbd_compostie_km.o
+    0x0800193c   0x0800193c   0x00000006   Code   RO         2754    i.TIM_ClearITPendingBit  ch32f20x_tim.o
+    0x08001942   0x08001942   0x00000022   Code   RO         2780    i.TIM_GetITStatus   ch32f20x_tim.o
     0x08001964   0x08001964   0x00000054   Code   RO          152    i.UART4_IRQHandler  main.o
-    0x080019b8   0x080019b8   0x00000024   Code   RO         4354    i.USART2_IRQHandler  usbd_compostie_km.o
-    0x080019dc   0x080019dc   0x00000018   Code   RO         3301    i.USART_Cmd         ch32f20x_usart.o
-    0x080019f4   0x080019f4   0x00000012   Code   RO         3304    i.USART_GetFlagStatus  ch32f20x_usart.o
-    0x08001a06   0x08001a06   0x0000004c   Code   RO         3305    i.USART_GetITStatus  ch32f20x_usart.o
-    0x08001a52   0x08001a52   0x00000040   Code   RO         3307    i.USART_ITConfig    ch32f20x_usart.o
+    0x080019b8   0x080019b8   0x00000024   Code   RO         4348    i.USART2_IRQHandler  usbd_compostie_km.o
+    0x080019dc   0x080019dc   0x00000018   Code   RO         3295    i.USART_Cmd         ch32f20x_usart.o
+    0x080019f4   0x080019f4   0x00000012   Code   RO         3298    i.USART_GetFlagStatus  ch32f20x_usart.o
+    0x08001a06   0x08001a06   0x0000004c   Code   RO         3299    i.USART_GetITStatus  ch32f20x_usart.o
+    0x08001a52   0x08001a52   0x00000040   Code   RO         3301    i.USART_ITConfig    ch32f20x_usart.o
     0x08001a92   0x08001a92   0x00000002   PAD
-    0x08001a94   0x08001a94   0x0000009c   Code   RO         3308    i.USART_Init        ch32f20x_usart.o
-    0x08001b30   0x08001b30   0x000000b4   Code   RO          305    i.USART_Printf_Init  debug.o
-    0x08001be4   0x08001be4   0x0000000a   Code   RO         3313    i.USART_ReceiveData  ch32f20x_usart.o
-    0x08001bee   0x08001bee   0x00000008   Code   RO         3316    i.USART_SendData    ch32f20x_usart.o
+    0x08001a94   0x08001a94   0x0000009c   Code   RO         3302    i.USART_Init        ch32f20x_usart.o
+    0x08001b30   0x08001b30   0x000000b4   Code   RO          299    i.USART_Printf_Init  debug.o
+    0x08001be4   0x08001be4   0x0000000a   Code   RO         3307    i.USART_ReceiveData  ch32f20x_usart.o
+    0x08001bee   0x08001bee   0x00000008   Code   RO         3310    i.USART_SendData    ch32f20x_usart.o
     0x08001bf6   0x08001bf6   0x00000002   PAD
-    0x08001bf8   0x08001bf8   0x00000040   Code   RO         3591    i.USB20_RCC_Init    ch32f20x_usbhs_host.o
-    0x08001c38   0x08001c38   0x00000060   Code   RO         4275    i.USBFS_Device_Endp_Init  ch32f20x_usbfs_device.o
-    0x08001c98   0x08001c98   0x0000007c   Code   RO         4276    i.USBFS_Device_Init  ch32f20x_usbfs_device.o
-    0x08001d14   0x08001d14   0x00000138   Code   RO         4277    i.USBFS_Endp_DataUp  ch32f20x_usbfs_device.o
-    0x08001e4c   0x08001e4c   0x00000728   Code   RO         4278    i.USBFS_IRQHandler  ch32f20x_usbfs_device.o
-    0x08002574   0x08002574   0x00000050   Code   RO         3959    i.USBFS_RCC_Init    ch32f20x_usbfs_host.o
-    0x080025c4   0x080025c4   0x00000030   Code   RO         4279    i.USBFS_Send_Resume  ch32f20x_usbfs_device.o
-    0x080025f4   0x080025f4   0x0000022c   Code   RO         3592    i.USBHS_Analysis_Descr  ch32f20x_usbhs_host.o
-    0x08002820   0x08002820   0x00000180   Code   RO         3595    i.USBHS_CSPLITPacket  ch32f20x_usbhs_host.o
-    0x080029a0   0x080029a0   0x0000001c   Code   RO         3596    i.USBHS_CopySetupReqPkg  ch32f20x_usbhs_host.o
-    0x080029bc   0x080029bc   0x000000cc   Code   RO         3598    i.USBHS_CtrlGetConfigDescr  ch32f20x_usbhs_host.o
-    0x08002a88   0x08002a88   0x00000094   Code   RO         3599    i.USBHS_CtrlGetDevDescr  ch32f20x_usbhs_host.o
-    0x08002b1c   0x08002b1c   0x0000003c   Code   RO         3600    i.USBHS_CtrlGetReportDescr  ch32f20x_usbhs_host.o
-    0x08002b58   0x08002b58   0x0000005c   Code   RO         3601    i.USBHS_CtrlGet_HUBDevDescr  ch32f20x_usbhs_host.o
-    0x08002bb4   0x08002bb4   0x00000024   Code   RO         3602    i.USBHS_CtrlSetIdle  ch32f20x_usbhs_host.o
-    0x08002bd8   0x08002bd8   0x00000020   Code   RO         3603    i.USBHS_CtrlSetUsbConfig  ch32f20x_usbhs_host.o
-    0x08002bf8   0x08002bf8   0x00000038   Code   RO         3605    i.USBHS_CtrlUSBHS_SetAddress  ch32f20x_usbhs_host.o
-    0x08002c30   0x08002c30   0x0000000c   Code   RO         3606    i.USBHS_CurrentAddr  ch32f20x_usbhs_host.o
-    0x08002c3c   0x08002c3c   0x00000028   Code   RO         3607    i.USBHS_HOST_ClearPortFeature_Process  ch32f20x_usbhs_host.o
-    0x08002c64   0x08002c64   0x00000110   Code   RO         3608    i.USBHS_HUBCheckPortConnect  ch32f20x_usbhs_host.o
-    0x08002d74   0x08002d74   0x00000698   Code   RO         3609    i.USBHS_HUBHostEnum  ch32f20x_usbhs_host.o
-    0x0800340c   0x0800340c   0x000009a0   Code   RO         3610    i.USBHS_HUB_Process  ch32f20x_usbhs_host.o
-    0x08003dac   0x08003dac   0x00000190   Code   RO         3612    i.USBHS_HostCtrlTransfer  ch32f20x_usbhs_host.o
-    0x08003f3c   0x08003f3c   0x00000258   Code   RO         3613    i.USBHS_HostEnum    ch32f20x_usbhs_host.o
-    0x08004194   0x08004194   0x00000064   Code   RO         3614    i.USBHS_HostInit    ch32f20x_usbhs_host.o
-    0x080041f8   0x080041f8   0x000000f8   Code   RO         3615    i.USBHS_HubClearPortFeature  ch32f20x_usbhs_host.o
-    0x080042f0   0x080042f0   0x00000054   Code   RO         3616    i.USBHS_HubCtrlGetHidDescr  ch32f20x_usbhs_host.o
-    0x08004344   0x08004344   0x000001f4   Code   RO         3617    i.USBHS_HubCtrlTransfer  ch32f20x_usbhs_host.o
-    0x08004538   0x08004538   0x00000068   Code   RO         3618    i.USBHS_HubGetPortStatus  ch32f20x_usbhs_host.o
-    0x080045a0   0x080045a0   0x00000028   Code   RO         3619    i.USBHS_HubSetPortFeature  ch32f20x_usbhs_host.o
-    0x080045c8   0x080045c8   0x0000006c   Code   RO         3620    i.USBHS_HubUSBGetDevDescr  ch32f20x_usbhs_host.o
-    0x08004634   0x08004634   0x00000288   Code   RO         3621    i.USBHS_HubUSBHS_Analysis_Descr  ch32f20x_usbhs_host.o
-    0x080048bc   0x080048bc   0x00000044   Code   RO         3622    i.USBHS_HubUSBSetAddr  ch32f20x_usbhs_host.o
-    0x08004900   0x08004900   0x0000003c   Code   RO         3623    i.USBHS_HubUSBSetIdle  ch32f20x_usbhs_host.o
-    0x0800493c   0x0800493c   0x00000044   Code   RO         3625    i.USBHS_HubUSBUSBHS_SetConfig  ch32f20x_usbhs_host.o
-    0x08004980   0x08004980   0x000000ac   Code   RO         3626    i.USBHS_INT_In_Data  ch32f20x_usbhs_host.o
-    0x08004a2c   0x08004a2c   0x00000178   Code   RO         3629    i.USBHS_SSPLITPacket  ch32f20x_usbhs_host.o
-    0x08004ba4   0x08004ba4   0x00000054   Code   RO         3630    i.USBHS_SetBusReset  ch32f20x_usbhs_host.o
-    0x08004bf8   0x08004bf8   0x0000015c   Code   RO         3631    i.USBHS_USBHostTransact  ch32f20x_usbhs_host.o
-    0x08004d54   0x08004d54   0x0000001c   Code   RO         3633    i.USB_DelUSBHS_AddressNumber  ch32f20x_usbhs_host.o
-    0x08004d70   0x08004d70   0x00000028   Code   RO         3634    i.USB_SetUSBHS_AddressNumber  ch32f20x_usbhs_host.o
-    0x08004d98   0x08004d98   0x00000028   Code   RO         4357    i.USB_Sleep_Wakeup_CFG  usbd_compostie_km.o
-    0x08004dc0   0x08004dc0   0x00000004   Code   RO            9    i.UsageFault_Handler  ch32f20x_it.o
-    0x08004dc4   0x08004dc4   0x0000000e   Code   RO         4568    i._is_digit         c_w.l(__printf_wp.o)
-    0x08004dd2   0x08004dd2   0x00000002   PAD
-    0x08004dd4   0x08004dd4   0x00000024   Code   RO          306    i.fputc             debug.o
-    0x08004df8   0x08004df8   0x00000030   Code   RO          154    i.hex_to_byte       main.o
-    0x08004e28   0x08004e28   0x0000044c   Code   RO          155    i.main              main.o
-    0x08005274   0x08005274   0x0000006e   Code   RO          156    i.parse_hex_report  main.o
-    0x080052e2   0x080052e2   0x00000002   PAD
-    0x080052e4   0x080052e4   0x0000002c   Code   RO         4633    locale$$code        c_w.l(lc_ctype_c.o)
-    0x08005310   0x08005310   0x00000070   Data   RO         3636    .constdata          ch32f20x_usbhs_host.o
-    0x08005380   0x08005380   0x00000103   Data   RO         4330    .constdata          usbd_desc.o
-    0x08005483   0x08005483   0x00000028   Data   RO         4541    .constdata          c_w.l(_printf_hex_int.o)
-    0x080054ab   0x080054ab   0x00000011   Data   RO         4571    .constdata          c_w.l(__printf_flags_wp.o)
-    0x080054bc   0x080054bc   0x0000005b   Data   RO         3637    .conststring        ch32f20x_usbhs_host.o
-    0x08005517   0x08005517   0x00000001   PAD
-    0x08005518   0x08005518   0x00000020   Data   RO         4818    Region$$Table       anon$$obj.o
-    0x08005538   0x08005538   0x00000110   Data   RO         4632    locale$$data        c_w.l(lc_ctype_c.o)
+    0x08001bf8   0x08001bf8   0x00000040   Code   RO         3585    i.USB20_RCC_Init    ch32f20x_usbhs_host.o
+    0x08001c38   0x08001c38   0x00000068   Code   RO         4269    i.USBFS_Device_Endp_Init  ch32f20x_usbfs_device.o
+    0x08001ca0   0x08001ca0   0x0000007c   Code   RO         4270    i.USBFS_Device_Init  ch32f20x_usbfs_device.o
+    0x08001d1c   0x08001d1c   0x00000138   Code   RO         4271    i.USBFS_Endp_DataUp  ch32f20x_usbfs_device.o
+    0x08001e54   0x08001e54   0x00000814   Code   RO         4272    i.USBFS_IRQHandler  ch32f20x_usbfs_device.o
+    0x08002668   0x08002668   0x00000050   Code   RO         3953    i.USBFS_RCC_Init    ch32f20x_usbfs_host.o
+    0x080026b8   0x080026b8   0x00000030   Code   RO         4273    i.USBFS_Send_Resume  ch32f20x_usbfs_device.o
+    0x080026e8   0x080026e8   0x0000022c   Code   RO         3586    i.USBHS_Analysis_Descr  ch32f20x_usbhs_host.o
+    0x08002914   0x08002914   0x00000180   Code   RO         3589    i.USBHS_CSPLITPacket  ch32f20x_usbhs_host.o
+    0x08002a94   0x08002a94   0x0000001c   Code   RO         3590    i.USBHS_CopySetupReqPkg  ch32f20x_usbhs_host.o
+    0x08002ab0   0x08002ab0   0x000000cc   Code   RO         3592    i.USBHS_CtrlGetConfigDescr  ch32f20x_usbhs_host.o
+    0x08002b7c   0x08002b7c   0x00000094   Code   RO         3593    i.USBHS_CtrlGetDevDescr  ch32f20x_usbhs_host.o
+    0x08002c10   0x08002c10   0x0000003c   Code   RO         3594    i.USBHS_CtrlGetReportDescr  ch32f20x_usbhs_host.o
+    0x08002c4c   0x08002c4c   0x0000005c   Code   RO         3595    i.USBHS_CtrlGet_HUBDevDescr  ch32f20x_usbhs_host.o
+    0x08002ca8   0x08002ca8   0x00000024   Code   RO         3596    i.USBHS_CtrlSetIdle  ch32f20x_usbhs_host.o
+    0x08002ccc   0x08002ccc   0x00000020   Code   RO         3597    i.USBHS_CtrlSetUsbConfig  ch32f20x_usbhs_host.o
+    0x08002cec   0x08002cec   0x00000038   Code   RO         3599    i.USBHS_CtrlUSBHS_SetAddress  ch32f20x_usbhs_host.o
+    0x08002d24   0x08002d24   0x0000000c   Code   RO         3600    i.USBHS_CurrentAddr  ch32f20x_usbhs_host.o
+    0x08002d30   0x08002d30   0x00000028   Code   RO         3601    i.USBHS_HOST_ClearPortFeature_Process  ch32f20x_usbhs_host.o
+    0x08002d58   0x08002d58   0x00000110   Code   RO         3602    i.USBHS_HUBCheckPortConnect  ch32f20x_usbhs_host.o
+    0x08002e68   0x08002e68   0x00000698   Code   RO         3603    i.USBHS_HUBHostEnum  ch32f20x_usbhs_host.o
+    0x08003500   0x08003500   0x000009a0   Code   RO         3604    i.USBHS_HUB_Process  ch32f20x_usbhs_host.o
+    0x08003ea0   0x08003ea0   0x00000190   Code   RO         3606    i.USBHS_HostCtrlTransfer  ch32f20x_usbhs_host.o
+    0x08004030   0x08004030   0x00000258   Code   RO         3607    i.USBHS_HostEnum    ch32f20x_usbhs_host.o
+    0x08004288   0x08004288   0x00000064   Code   RO         3608    i.USBHS_HostInit    ch32f20x_usbhs_host.o
+    0x080042ec   0x080042ec   0x000000f8   Code   RO         3609    i.USBHS_HubClearPortFeature  ch32f20x_usbhs_host.o
+    0x080043e4   0x080043e4   0x00000054   Code   RO         3610    i.USBHS_HubCtrlGetHidDescr  ch32f20x_usbhs_host.o
+    0x08004438   0x08004438   0x000001f4   Code   RO         3611    i.USBHS_HubCtrlTransfer  ch32f20x_usbhs_host.o
+    0x0800462c   0x0800462c   0x00000068   Code   RO         3612    i.USBHS_HubGetPortStatus  ch32f20x_usbhs_host.o
+    0x08004694   0x08004694   0x00000028   Code   RO         3613    i.USBHS_HubSetPortFeature  ch32f20x_usbhs_host.o
+    0x080046bc   0x080046bc   0x0000006c   Code   RO         3614    i.USBHS_HubUSBGetDevDescr  ch32f20x_usbhs_host.o
+    0x08004728   0x08004728   0x00000288   Code   RO         3615    i.USBHS_HubUSBHS_Analysis_Descr  ch32f20x_usbhs_host.o
+    0x080049b0   0x080049b0   0x00000044   Code   RO         3616    i.USBHS_HubUSBSetAddr  ch32f20x_usbhs_host.o
+    0x080049f4   0x080049f4   0x0000003c   Code   RO         3617    i.USBHS_HubUSBSetIdle  ch32f20x_usbhs_host.o
+    0x08004a30   0x08004a30   0x00000044   Code   RO         3619    i.USBHS_HubUSBUSBHS_SetConfig  ch32f20x_usbhs_host.o
+    0x08004a74   0x08004a74   0x000000ac   Code   RO         3620    i.USBHS_INT_In_Data  ch32f20x_usbhs_host.o
+    0x08004b20   0x08004b20   0x00000178   Code   RO         3623    i.USBHS_SSPLITPacket  ch32f20x_usbhs_host.o
+    0x08004c98   0x08004c98   0x00000054   Code   RO         3624    i.USBHS_SetBusReset  ch32f20x_usbhs_host.o
+    0x08004cec   0x08004cec   0x0000015c   Code   RO         3625    i.USBHS_USBHostTransact  ch32f20x_usbhs_host.o
+    0x08004e48   0x08004e48   0x0000001c   Code   RO         3627    i.USB_DelUSBHS_AddressNumber  ch32f20x_usbhs_host.o
+    0x08004e64   0x08004e64   0x00000028   Code   RO         3628    i.USB_SetUSBHS_AddressNumber  ch32f20x_usbhs_host.o
+    0x08004e8c   0x08004e8c   0x00000028   Code   RO         4351    i.USB_Sleep_Wakeup_CFG  usbd_compostie_km.o
+    0x08004eb4   0x08004eb4   0x00000004   Code   RO            9    i.UsageFault_Handler  ch32f20x_it.o
+    0x08004eb8   0x08004eb8   0x0000000e   Code   RO         4562    i._is_digit         c_w.l(__printf_wp.o)
+    0x08004ec6   0x08004ec6   0x00000002   PAD
+    0x08004ec8   0x08004ec8   0x00000024   Code   RO          300    i.fputc             debug.o
+    0x08004eec   0x08004eec   0x00000030   Code   RO          153    i.hex_to_byte       main.o
+    0x08004f1c   0x08004f1c   0x00000494   Code   RO          154    i.main              main.o
+    0x080053b0   0x080053b0   0x0000006e   Code   RO          155    i.parse_hex_report  main.o
+    0x0800541e   0x0800541e   0x00000002   PAD
+    0x08005420   0x08005420   0x0000002c   Code   RO         4627    locale$$code        c_w.l(lc_ctype_c.o)
+    0x0800544c   0x0800544c   0x00000070   Data   RO         3630    .constdata          ch32f20x_usbhs_host.o
+    0x080054bc   0x080054bc   0x00000150   Data   RO         4324    .constdata          usbd_desc.o
+    0x0800560c   0x0800560c   0x00000028   Data   RO         4535    .constdata          c_w.l(_printf_hex_int.o)
+    0x08005634   0x08005634   0x00000011   Data   RO         4565    .constdata          c_w.l(__printf_flags_wp.o)
+    0x08005645   0x08005645   0x00000003   PAD
+    0x08005648   0x08005648   0x0000005b   Data   RO         3631    .conststring        ch32f20x_usbhs_host.o
+    0x080056a3   0x080056a3   0x00000001   PAD
+    0x080056a4   0x080056a4   0x00000020   Data   RO         4812    Region$$Table       anon$$obj.o
+    0x080056c4   0x080056c4   0x00000110   Data   RO         4626    locale$$data        c_w.l(lc_ctype_c.o)
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08005648, Size: 0x000046a8, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080057d4, Size: 0x000046f0, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08005648   0x0000000f   Data   RW          159    .data               main.o
-    0x2000000f   0x08005657   0x00000001   PAD
-    0x20000010   0x08005658   0x00000014   Data   RW          254    .data               system_ch32f20x.o
-    0x20000024   0x0800566c   0x00000008   Data   RW          307    .data               debug.o
-    0x2000002c   0x08005674   0x00000014   Data   RW         2010    .data               ch32f20x_rcc.o
-    0x20000040   0x08005688   0x00000008   Data   RW         3528    .data               usb_hub.o
-    0x20000048   0x08005690   0x00000013   Data   RW         3638    .data               ch32f20x_usbhs_host.o
-    0x2000005b   0x080056a3   0x00000001   PAD
-    0x2000005c   0x080056a4   0x0000001c   Data   RW         4281    .data               ch32f20x_usbfs_device.o
-    0x20000078   0x080056c0   0x00000027   Data   RW         4358    .data               usbd_compostie_km.o
-    0x2000009f   0x080056e7   0x00000001   PAD
-    0x200000a0        -       0x00001100   Zero   RW          157    .bss                main.o
-    0x200011a0        -       0x00000e60   Zero   RW         3526    .bss                usb_hub.o
-    0x20002000        -       0x00000c98   Zero   RW         3635    .bss                ch32f20x_usbhs_host.o
-    0x20002c98        -       0x000010ea   Zero   RW         3968    .bss                ch32f20x_usbfs_host.o
-    0x20003d82   0x080056e7   0x00000002   PAD
-    0x20003d84        -       0x000000c0   Zero   RW         4280    .bss                ch32f20x_usbfs_device.o
-    0x20003e44        -       0x00000060   Zero   RW         4687    .bss                c_w.l(libspace.o)
-    0x20003ea4   0x080056e7   0x00000004   PAD
-    0x20003ea8        -       0x00000400   Zero   RW          285    HEAP                startup_ch32f20x_d8c.o
-    0x200042a8        -       0x00000400   Zero   RW          284    STACK               startup_ch32f20x_d8c.o
+    0x20000000   0x080057d4   0x00000013   Data   RW          158    .data               main.o
+    0x20000013   0x080057e7   0x00000001   PAD
+    0x20000014   0x080057e8   0x00000014   Data   RW          248    .data               system_ch32f20x.o
+    0x20000028   0x080057fc   0x00000008   Data   RW          301    .data               debug.o
+    0x20000030   0x08005804   0x00000014   Data   RW         2004    .data               ch32f20x_rcc.o
+    0x20000044   0x08005818   0x00000008   Data   RW         3522    .data               usb_hub.o
+    0x2000004c   0x08005820   0x00000013   Data   RW         3632    .data               ch32f20x_usbhs_host.o
+    0x2000005f   0x08005833   0x00000001   PAD
+    0x20000060   0x08005834   0x0000001e   Data   RW         4275    .data               ch32f20x_usbfs_device.o
+    0x2000007e   0x08005852   0x00000027   Data   RW         4352    .data               usbd_compostie_km.o
+    0x200000a5   0x08005879   0x00000003   PAD
+    0x200000a8        -       0x00001100   Zero   RW          156    .bss                main.o
+    0x200011a8        -       0x00000e60   Zero   RW         3520    .bss                usb_hub.o
+    0x20002008        -       0x00000c98   Zero   RW         3629    .bss                ch32f20x_usbhs_host.o
+    0x20002ca0        -       0x000010ea   Zero   RW         3962    .bss                ch32f20x_usbfs_host.o
+    0x20003d8a   0x08005879   0x00000002   PAD
+    0x20003d8c        -       0x00000100   Zero   RW         4274    .bss                ch32f20x_usbfs_device.o
+    0x20003e8c        -       0x00000060   Zero   RW         4681    .bss                c_w.l(libspace.o)
+    0x20003eec   0x08005879   0x00000004   PAD
+    0x20003ef0        -       0x00000400   Zero   RW          279    HEAP                startup_ch32f20x_d8c.o
+    0x200042f0        -       0x00000400   Zero   RW          278    STACK               startup_ch32f20x_d8c.o
 
 
 ==============================================================================
@@ -2638,29 +2632,29 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       184         16          0          0          0       2422   ch32f20x_exti.o
-       494          4          0          0          0       3415   ch32f20x_gpio.o
-        36          0          0          0          0     192358   ch32f20x_it.o
-       152         12          0          0          0       1914   ch32f20x_misc.o
-        64         10          0          0          0        700   ch32f20x_pwr.o
-       528         48          0         20          0       5807   ch32f20x_rcc.o
-        40          0          0          0          0       2062   ch32f20x_tim.o
-       356          6          0          0          0       6677   ch32f20x_usart.o
-      2412        196          0         28        192      21631   ch32f20x_usbfs_device.o
-        80         16          0          0       4330      17247   ch32f20x_usbfs_host.o
-     10356       2568        203         19       3224      47680   ch32f20x_usbhs_host.o
-       436         42          0          8          0       5089   debug.o
-      1342        456          0         15       4352      36247   main.o
-        64         26        416          0       2048        900   startup_ch32f20x_d8c.o
-       676         48          0         20          0       3265   system_ch32f20x.o
-       644          6          0          8       3680      19839   usb_hub.o
-       476         82          0         39          0       6933   usbd_compostie_km.o
-         0          0        259          0          0       1001   usbd_desc.o
+       184         16          0          0          0       2470   ch32f20x_exti.o
+       494          4          0          0          0       3467   ch32f20x_gpio.o
+        36          0          0          0          0     192566   ch32f20x_it.o
+       152         12          0          0          0       1950   ch32f20x_misc.o
+        64         10          0          0          0        712   ch32f20x_pwr.o
+       528         48          0         20          0       5899   ch32f20x_rcc.o
+        40          0          0          0          0       2102   ch32f20x_tim.o
+       356          6          0          0          0       6777   ch32f20x_usart.o
+      2656        194          0         30        256      21937   ch32f20x_usbfs_device.o
+        80         16          0          0       4330      17327   ch32f20x_usbfs_host.o
+     10356       2568        203         19       3224      48216   ch32f20x_usbhs_host.o
+       436         42          0          8          0       5173   debug.o
+      1414        454          0         19       4352      36544   main.o
+        64         26        416          0       2048        916   startup_ch32f20x_d8c.o
+       676         48          0         20          0       3341   system_ch32f20x.o
+       644          6          0          8       3680      20003   usb_hub.o
+       476         82          0         39          0       7089   usbd_compostie_km.o
+         0          0        336          0          0       1219   usbd_desc.o
 
     ----------------------------------------------------------------------
-     18348       3536        911        160      17828     375187   Object Totals
+     18664       3532        988        168      17892     377708   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         8          0          1          3          2          0   (incl. Padding)
+         8          0          1          5          2          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2726,8 +2720,8 @@ Image component sizes
          2          0          0          0          0         68   use_no_semi.o
 
     ----------------------------------------------------------------------
-      2500        134        329          0        100       3292   Library Totals
-        12          0          0          0          4          0   (incl. Padding)
+      2500        134        332          0        100       3292   Library Totals
+        12          0          3          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -2736,7 +2730,7 @@ Image component sizes
       2488        134        329          0         96       3292   c_w.l
 
     ----------------------------------------------------------------------
-      2500        134        329          0        100       3292   Library Totals
+      2500        134        332          0        100       3292   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2745,15 +2739,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     20848       3670       1240        160      17928     371611   Grand Totals
-     20848       3670       1240        160      17928     371611   ELF Image Totals
-     20848       3670       1240        160          0          0   ROM Totals
+     21164       3666       1320        168      17992     374132   Grand Totals
+     21164       3666       1320        168      17992     374132   ELF Image Totals
+     21164       3666       1320        168          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                22088 (  21.57kB)
-    Total RW  Size (RW Data + ZI Data)             18088 (  17.66kB)
-    Total ROM Size (Code + RO Data + RW Data)      22248 (  21.73kB)
+    Total RO  Size (Code + RO Data)                22484 (  21.96kB)
+    Total RW  Size (RW Data + ZI Data)             18160 (  17.73kB)
+    Total ROM Size (Code + RO Data + RW Data)      22652 (  22.12kB)
 
 ==============================================================================
 

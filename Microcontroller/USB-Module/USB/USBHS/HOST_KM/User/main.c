@@ -53,7 +53,8 @@ __attribute__ ((aligned(4))) UINT8   USBFS_endpRXbuf[ MAX_PACKET_SIZE ];  // OUT
 #define USBFS_HUBCONNECT      (1<<2)
 #define USBFS_ROOTDEVCONNECT  (1<<3)
 
-uint8_t MS_DataPack[4] = {0x00, 0x00, 0x00, 0xff};
+uint8_t MS_DataPack[4] = {0x00, 0x00, 0x00, 0x00};
+uint8_t MS2_DataPack[4] = {0x00, 0x00, 0x00, 0x00};
 uint8_t KB_DataPack[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 uint8_t uart4_storage[buffer_length] = {0x00};
 uint8_t indexes = 0x00;
@@ -108,33 +109,6 @@ void parse_hex_report(const char *ascii, uint8_t *out_bytes, int max_len)
     }
 }
 
-void decode_frame(uint8_t *frame, int frame_len)
-{
-    uint8_t start = frame[0];     // 0xAA
-    uint8_t cmd   = frame[1];
-    uint8_t len   = frame[2];
-
-    // Safety check
-    if (start != 0xAA) return;
-    if (frame[4 + len] != 0x55) return;   // end byte check
-
-    // Copy payload into a null-terminated string
-    char ascii_payload[64];
-    memcpy(ascii_payload, &frame[3], len);
-    ascii_payload[len] = '\0';
-
-    printf("ASCII payload received: %s\n", ascii_payload);
-
-    // Now convert to HID bytes
-    uint8_t hid_report[8] = {0};
-    parse_hex_report(ascii_payload, hid_report, sizeof(hid_report));
-
-    printf("Decoded HID bytes: ");
-		int i;
-    for (i = 0; i < sizeof(hid_report); i++)
-        printf("%02X ", hid_report[i]);
-    printf("\n");
-}
 
 /*********************************************************************
  * @fn      main
@@ -216,6 +190,21 @@ int main( void )
 										MS_DataPack[3] = hid[3];
 										
 										USBFS_Endp_DataUp(DEF_UEP2, MS_DataPack, sizeof(MS_DataPack), DEF_UEP_CPY_LOAD);		// manipulate the mouse 
+									}
+									else if(uart4_storage[1] == 0x04){		
+										char temp[64];
+										memcpy(temp, ascii_payload, 8);																	// copy the stored data into a temp variable, the length of mouse HID is 8 bytes
+										temp[8] = '\0';
+									
+										uint8_t hid[4];
+										parse_hex_report(temp, hid, 4);																	// parse the temp variables into hid report 
+										
+										MS_DataPack[0] = hid[0];
+										MS_DataPack[1] = hid[1];
+										MS_DataPack[2] = hid[2];
+										MS_DataPack[3] = hid[3];
+										
+										USBFS_Endp_DataUp(DEF_UEP3, MS_DataPack, sizeof(MS_DataPack), DEF_UEP_CPY_LOAD);		// manipulate the mouse 2
 									}
 									else if(uart4_storage[1] == 0x02){
 										char temp[64];
@@ -383,5 +372,35 @@ int main( void )
 		} // while 
 } // main 
 
+/*
+void decode_frame(uint8_t *frame, int frame_len)
+{
+    uint8_t start = frame[0];     // 0xAA
+    uint8_t cmd   = frame[1];
+    uint8_t len   = frame[2];
+
+    // Safety check
+    if (start != 0xAA) return;
+    if (frame[4 + len] != 0x55) return;   // end byte check
+
+    // Copy payload into a null-terminated string
+    char ascii_payload[64];
+    memcpy(ascii_payload, &frame[3], len);
+    ascii_payload[len] = '\0';
+
+    printf("ASCII payload received: %s\n", ascii_payload);
+
+    // Now convert to HID bytes
+    uint8_t hid_report[8] = {0};
+    parse_hex_report(ascii_payload, hid_report, sizeof(hid_report));
+
+    printf("Decoded HID bytes: ");
+		int i;
+    for (i = 0; i < sizeof(hid_report); i++)
+        printf("%02X ", hid_report[i]);
+    printf("\n");
+}
+
+*/
 
 

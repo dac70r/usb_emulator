@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\obj\CH32F20x.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\obj\CH32F20x.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Mon Feb 02 16:31:00 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Feb 25 12:08:44 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1848 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1264,7 +1264,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBHS_HostInit
 </UL>
 
-<P><STRONG><a name="[d5]"></a>USBFS_Device_Endp_Init</STRONG> (Thumb, 74 bytes, Stack size 0 bytes, ch32f20x_usbfs_device.o(i.USBFS_Device_Endp_Init))
+<P><STRONG><a name="[d5]"></a>USBFS_Device_Endp_Init</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, ch32f20x_usbfs_device.o(i.USBFS_Device_Endp_Init))
 <BR><BR>[Called By]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBFS_Device_Init
 <LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBFS_IRQHandler
 </UL>
@@ -1287,7 +1287,7 @@ Global Symbols
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[53]"></a>USBFS_IRQHandler</STRONG> (Thumb, 1786 bytes, Stack size 24 bytes, ch32f20x_usbfs_device.o(i.USBFS_IRQHandler))
+<P><STRONG><a name="[53]"></a>USBFS_IRQHandler</STRONG> (Thumb, 2008 bytes, Stack size 24 bytes, ch32f20x_usbfs_device.o(i.USBFS_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176 + Unknown Stack Size
 <LI>Call Chain = USBFS_IRQHandler &rArr; MCU_Sleep_Wakeup_Operate &rArr; __2printf &rArr; _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -1718,7 +1718,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_hex_report
 </UL>
 
-<P><STRONG><a name="[82]"></a>main</STRONG> (Thumb, 662 bytes, Stack size 80 bytes, main.o(i.main))
+<P><STRONG><a name="[82]"></a>main</STRONG> (Thumb, 736 bytes, Stack size 80 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1848 + Unknown Stack Size
 <LI>Call Chain = main &rArr; USBHS_HUB_Process &rArr;  USBHS_HUB_Process (Cycle)
 </UL>

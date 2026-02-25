@@ -5,12 +5,13 @@ import pyautogui
 # ============================================================
 #                 PACKET FORMAT CONSTANTS
 # ============================================================
-START_BYTE = 0xAA
-END_BYTE   = 0x55
+START_BYTE = 0xAA                   # Signals the start of USB Packet Frame
+END_BYTE   = 0x55                   # Signals the end of USB Packet Frame
 
-CMD_MOUSE           = 0x01
+CMD_MOUSE           = 0x01          # 
 CMD_KEYBOARD        = 0x02
 CMD_MOUSE_KEYBOARD  = 0x03
+CMD_MOUSE2          = 0x04  
 # ============================================================
 #                 PACKET FORMAT CONSTANTS
 # ============================================================
@@ -319,8 +320,8 @@ def move_mouse_to_absolute(dx, dy):
 # ============================================================
 #               REMOTE MODE (ONE-SHOT EXECUTION)
 # ============================================================
-def mouse_api():
-    cmd = CMD_MOUSE
+def mouse_api(name):
+    cmd = name
 
     print("\nSelect Desired Mouse Movement:")
     print("1) Scroll Up")
@@ -672,12 +673,13 @@ def remote_mode():
         print("1) Mouse (CMD = 0x01)    ")
         print("2) Keyboard (CMD = 0x02) ")
         print("3) Mouse + Keyboard      ")
-        print("4) Exit                  ")
+        print("4) Mouse2 (CMD = 0x04)   ")
+        print("5) Exit                  ")
 
         cmd_choice = input("> ").strip()    
 
         if cmd_choice == "1":  
-            mouse_api()
+            mouse_api(CMD_MOUSE)
             continue
 
         elif cmd_choice == "2":
@@ -689,11 +691,15 @@ def remote_mode():
             continue
 
         elif cmd_choice == "4":
+            mouse_api(CMD_MOUSE2)
+            continue
+
+        elif cmd_choice == "5":
             print("Exiting remote mode...")
             break  # <-- exit the while loop
 
         else:
-            print("Invalid choice, please select 1, 2 or 3.")
+            print("Invalid choice, please select 1, 2, 3, 4 or 5.")
             continue
 
 # ============================================================
@@ -702,11 +708,13 @@ def remote_mode():
 if __name__ == "__main__":
     # System defaults to LOCAL mode.
     print("\n=== REMOTE MODE SESSION STARTED ===")
+    print("\n=== This Programme Sends UART Packets to MCU - UART RX = PB0 & UART TX = PB1")
+    print("\n=== Debugger Pinout SWCLK/ TCK = PA14, SWDIO/ TMS = PA13")
+    print("\n=== Use the provided debugger to send the UART Packets")
 
     # Open the Serial Terminal, change according to the appropriate terminal used
-    ser = serial.Serial('COM33', 115200, timeout=1)
+    ser = serial.Serial('COM4', 115200, timeout=1)
 
-    # Execute main operation
     remote_mode()
 
     # Close the Serial Terminal
